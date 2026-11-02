@@ -7,6 +7,7 @@ struct StackFeedView: View {
     let stack: SenderStack
 
     @State private var expanded: Set<UUID> = []
+    @State private var confirmsUnsubscribe = false
 
     var body: some View {
         ScrollViewReader { proxy in
@@ -61,6 +62,14 @@ struct StackFeedView: View {
 
             Spacer(minLength: 12)
 
+            UnsubscribeButton(isDone: store.isUnsubscribed(stack)) { confirmsUnsubscribe = true }
+                .confirmationDialog("Unsubscribe from \(stack.name)?", isPresented: $confirmsUnsubscribe) {
+                    Button("Unsubscribe") { store.unsubscribe(stack, archive: false) }
+                    Button("Unsubscribe and Archive All") { store.unsubscribe(stack, archive: true) }
+                } message: {
+                    Text("Nook asks the sender to stop emailing you. Mail you already have stays where it is.")
+                }
+
             if !unread.isEmpty {
                 HeaderButton(symbol: "envelope.open", help: String(localized: "Mark all as read")) { store.toggleRead(unread) }
             }
@@ -103,6 +112,38 @@ struct StackFeedView: View {
         withAnimation(.smooth(duration: 0.25)) { _ = expanded.insert(thread.id) }
         store.loadBodies(for: thread.id)
         store.markOpened(thread.id)
+    }
+}
+
+/// Göndericinin başlığında: henüz çıkılmadıysa ince çerçeveli bir düğme, çıkıldıysa sönük bir onay
+private struct UnsubscribeButton: View {
+    let isDone: Bool
+    let action: () -> Void
+    @State private var isHovering = false
+
+    var body: some View {
+        if isDone {
+            Label("Unsubscribed", systemImage: "checkmark")
+                .font(.system(size: 12, weight: .medium))
+                .foregroundStyle(.tertiary)
+                .padding(.horizontal, 6)
+        } else {
+            Button(action: action) {
+                Text("Unsubscribe")
+                    .font(.system(size: 12, weight: .medium))
+                    .padding(.horizontal, 12)
+                    .frame(height: 26)
+                    .background(Color.primary.opacity(isHovering ? 0.07 : 0), in: Capsule())
+                    .overlay(Capsule().strokeBorder(Color.primary.opacity(0.14), lineWidth: 0.5))
+                    .contentShape(Capsule())
+            }
+            .buttonStyle(.plain)
+            .focusEffectDisabled()
+            .foregroundStyle(.secondary)
+            .help("Stop getting mail from this sender")
+            .handCursor()
+            .onHover { isHovering = $0 }
+        }
     }
 }
 

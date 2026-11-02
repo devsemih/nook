@@ -177,6 +177,33 @@ nonisolated struct Attachment: Identifiable, Hashable, Codable, Sendable {
 
 // MARK: - Mesaj ve thread
 
+/// Göndericinin abonelikten çıkma yolu (RFC 2369). Tek tıkla çıkış (RFC 8058) varsa istek arka planda gönderilir.
+nonisolated struct Unsubscribe: Codable, Hashable, Sendable {
+    var web: URL?
+    var mailto: URL?
+    var oneClick: Bool
+
+    init?(header: String?, post: String?) {
+        guard let header else { return nil }
+        var web: URL?
+        var mailto: URL?
+        // <mailto:...>, <https://...> biçimindeki bağlantılar; katlanmış satırlardan kalan boşluklar atılır
+        for match in header.matches(of: /<([^>]+)>/) {
+            let link = String(match.output.1).filter { !$0.isWhitespace }
+            guard let url = URL(string: link), let scheme = url.scheme?.lowercased() else { continue }
+            if scheme == "mailto", mailto == nil {
+                mailto = url
+            } else if scheme == "https" || (scheme == "http" && web == nil) {
+                if web?.scheme?.lowercased() != "https" { web = url }
+            }
+        }
+        guard web != nil || mailto != nil else { return nil }
+        self.web = web
+        self.mailto = mailto
+        self.oneClick = web?.scheme?.lowercased() == "https" && (post?.lowercased().contains("list-unsubscribe=one-click") ?? false)
+    }
+}
+
 nonisolated struct Message: Identifiable, Hashable, Codable, Sendable {
     var id: UUID
     /// Gmail mesaj kimliği
@@ -208,6 +235,8 @@ nonisolated struct Message: Identifiable, Hashable, Codable, Sendable {
     var isPendingSend: Bool
     /// Bülten, bildirim gibi otomatik gönderilmiş; nil: eski sürümde indirildi, henüz bilinmiyor
     var automated: Bool?
+    /// List-Unsubscribe başlığı; eski sürümde indirilenlerde yok, gerekince sunucudan okunur
+    var unsubscribe: Unsubscribe?
 
     init(
         id: UUID = UUID(),
@@ -383,4 +412,6 @@ enum SettingsKey {
     static let classifierVersion = "classifierVersion"
     static let contentRulesVersion = "contentRulesVersion"
     static let showsIsland = "showsIsland"
+    static let islandOptions = "islandOptions"
+    static let unsubscribedSenders = "unsubscribedSenders"
 }

@@ -55,6 +55,7 @@ nonisolated enum MIME {
         var hasAttachments: Bool
         /// Bülten, bildirim gibi otomatik gönderilmiş mail
         var isAutomated: Bool
+        var unsubscribe: Unsubscribe?
     }
 
     // MARK: - Mesaj
@@ -93,7 +94,8 @@ nonisolated enum MIME {
             html: body,
             attachments: visible,
             hasAttachments: !visible.isEmpty || root.contentType == "multipart/mixed",
-            isAutomated: MailClassifier.isAutomated(header: root.header, from: from)
+            isAutomated: MailClassifier.isAutomated(header: root.header, from: from),
+            unsubscribe: Unsubscribe(header: root.header("list-unsubscribe"), post: root.header("list-unsubscribe-post"))
         )
     }
 

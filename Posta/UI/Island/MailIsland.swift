@@ -11,7 +11,15 @@ final class MailIsland {
     enum Mode: Equatable {
         case rest
         case peek(Peek)
+        /// Gelen maildeki doğrulama kodu, kopyalama düğmesiyle
+        case code(Code)
         case open
+    }
+
+    struct Code: Equatable {
+        var threadID: UUID
+        var sender: String
+        var code: String
     }
 
     struct Peek: Equatable {
@@ -23,6 +31,8 @@ final class MailIsland {
     }
 
     private(set) var mode: Mode = .rest
+    /// Dinlenirken gösterecek bir şey yoksa ada çentiğin içine çekilir
+    private(set) var isCompact = false
     /// Çentiğin boyutu; çentiksiz ekranda genişlik sıfır
     private(set) var notch = CGSize(width: 0, height: 32)
 
@@ -39,6 +49,8 @@ final class MailIsland {
     var isEnabled: Bool {
         UserDefaults.standard.object(forKey: SettingsKey.showsIsland) as? Bool ?? true
     }
+
+    var options: IslandOptions { .current }
 
     func start(store: MailStore) {
         guard self.store == nil else { return }
@@ -83,19 +95,47 @@ final class MailIsland {
 
     /// İnsanlardan yeni mail geldi: ada birkaç saniyeliğine açılır
     func announce(_ peek: Peek) {
-        guard isEnabled, mode != .open else { return }
+        let options = options
+        guard isEnabled, options.announces, mode != .open else { return }
         set(.peek(peek))
         peekTask?.cancel()
         peekTask = Task { [weak self] in
-            try? await Task.sleep(for: .seconds(6))
+            try? await Task.sleep(for: .seconds(options.peekSeconds))
             guard !Task.isCancelled, let self, case .peek = self.mode else { return }
+            self.set(.rest)
+        }
+    }
+
+    /// Doğrulama kodu geldi: Akış'tan gelse de gösterilir, kopyalanana ya da süre dolana kadar açık kalır
+    func announce(code: Code) {
+        guard isEnabled, options.showsCodes, mode != .open else { return }
+        set(.code(code))
+        scheduleCodeEnd(after: 20)
+    }
+
+    /// Kod kopyalandı: "Kopyalandı" bir an görünür, sonra ada kapanır
+    func copied() {
+        scheduleCodeEnd(after: 1.4)
+    }
+
+    private func scheduleCodeEnd(after seconds: Double) {
+        peekTask?.cancel()
+        peekTask = Task { [weak self] in
+            try? await Task.sleep(for: .seconds(seconds))
+            guard !Task.isCancelled, let self, case .code = self.mode else { return }
             self.set(.rest)
         }
     }
 
     func hover(_ inside: Bool) {
         closeTask?.cancel()
+        if case .code = mode {
+            // Kod okunurken kapanmasın; fare çıkınca birkaç saniye daha durur
+            if inside { peekTask?.cancel() } else { scheduleCodeEnd(after: 4) }
+            return
+        }
         if inside {
+            guard options.trigger == .hover else { return }
             peekTask?.cancel()
             if mode != .open { set(.open) }
         } else if mode == .open {
@@ -107,6 +147,18 @@ final class MailIsland {
         }
     }
 
+    /// Tıklayınca açılma seçiliyse; fareyle açılmada da tıklamak açar
+    func click() {
+        guard mode != .open else { return }
+        peekTask?.cancel()
+        set(.open)
+    }
+
+    func setCompact(_ compact: Bool) {
+        guard compact != isCompact else { return }
+        set(mode, compact: compact)
+    }
+
     /// Adadan Posta'ya: konuşma, gelen kutusu ya da yeni mail
     func open(_ link: PostaLink) {
         MainWindow.open()
@@ -114,32 +166,45 @@ final class MailIsland {
         set(.rest)
     }
 
-    private func set(_ new: Mode) {
-        let grows = size(for: new).height > size(for: mode).height || size(for: new).width > size(for: mode).width
-        if grows { resize(for: new) }
-        withAnimation(Self.spring) { mode = new }
-        // Küçülürken pencere animasyon bitince daralır; yoksa içerik kırpılır
-        if !grows {
-            resizeTask?.cancel()
-            resizeTask = Task { [weak self] in
-                try? await Task.sleep(for: .milliseconds(450))
-                guard !Task.isCancelled, let self, self.mode == new else { return }
-                self.resize(for: new)
-            }
+    private func set(_ new: Mode, compact: Bool? = nil) {
+        let compact = compact ?? isCompact
+        let old = size(for: mode)
+        let target = Self.size(for: new, notch: notch, options: options, compact: compact, feed: showsFeedLine)
+        // Pencere önce iki boyutu da kapsayacak kadar büyür, animasyon bitince yeni boyuta iner; yoksa içerik kırpılır
+        resize(to: CGSize(width: max(old.width, target.width), height: max(old.height, target.height)))
+        withAnimation(Self.spring) {
+            mode = new
+            isCompact = compact
+        }
+        resizeTask?.cancel()
+        resizeTask = Task { [weak self] in
+            try? await Task.sleep(for: .milliseconds(450))
+            guard !Task.isCancelled, let self, self.mode == new, self.isCompact == compact else { return }
+            self.resize(for: new)
         }
     }
 
     // MARK: Yerleşim
 
-    /// Adanın her durumdaki boyutu; pencere bundan biraz geniştir, gölge sığsın
     func size(for mode: Mode) -> CGSize {
+        Self.size(for: mode, notch: notch, options: options, compact: isCompact, feed: showsFeedLine)
+    }
+
+    private var showsFeedLine: Bool { options.showsFeed && (store?.splitInbox ?? true) }
+
+    /// Adanın her durumdaki boyutu; pencere bundan biraz geniştir, gölge sığsın
+    static func size(for mode: Mode, notch: CGSize, options: IslandOptions, compact: Bool, feed: Bool) -> CGSize {
         switch mode {
+        case .rest where compact:
+            return CGSize(width: max(notch.width, 120) + 2 * IslandView.ear, height: notch.height)
         case .rest:
             return CGSize(width: max(notch.width, 200) + 2 * IslandView.ear + 2 * IslandView.side, height: notch.height)
-        case .peek:
+        case .peek, .code:
             return CGSize(width: 420, height: notch.height + 72)
         case .open:
-            return CGSize(width: 460, height: notch.height + 290)
+            // Başlık, satırlar (her biri 42), Akış satırı ve alt boşluk
+            let content = 10 + 28 + 12 + CGFloat(options.rows) * 42 + (feed ? 38 : 0) + 14 + 20
+            return CGSize(width: 460, height: notch.height + content)
         }
     }
 
@@ -154,8 +219,11 @@ final class MailIsland {
     }
 
     private func resize(for mode: Mode) {
+        resize(to: size(for: mode))
+    }
+
+    private func resize(to size: CGSize) {
         guard let panel, let screen = Self.screen else { return }
-        let size = size(for: mode)
         let width = size.width + 40
         let height = size.height + 30
         panel.setFrame(NSRect(x: screen.frame.midX - width / 2, y: screen.frame.maxY - height, width: width, height: height), display: true)
@@ -169,10 +237,10 @@ final class MailIsland {
 
 // MARK: - Görünüm
 
-/// Logo gibi yalnızca siyah ve beyaz: siyah çentik, beyaz kemer, beyaz yazı. Renk yok;
-/// yeniyi parlaklık ve ağırlık anlatır.
+/// Çentikteki canlı ada: verileri ve seçenekleri okur, çizimi `IslandSurface`a bırakır
 struct IslandView: View {
     @Environment(MailStore.self) private var store
+    @AppStorage(SettingsKey.islandOptions) private var options = IslandOptions()
     let island: MailIsland
 
     /// Çentiğin üst köşelerindeki içe kıvrık kulak ve dinlenirken iki yandaki göstergelerin genişliği
@@ -180,56 +248,117 @@ struct IslandView: View {
     static let side: CGFloat = 40
 
     var body: some View {
-        let mode = island.mode
         let summary = store.widgetSnapshot(accent: nil)
-        let count = summary.accounts.reduce(0) { $0 + $1.people }
-        let size = island.size(for: mode)
+        let syncing = store.syncPhase == .syncing || store.overallSyncProgress != nil
+        let compact = IslandSurface.isCompact(summary: summary, options: options)
 
         VStack(spacing: 0) {
-            ZStack(alignment: .top) {
-                switch mode {
-                case .rest:
-                    rest(count: count)
-                case .peek(let peek):
-                    PeekContent(peek: peek, notch: island.notch.height) { island.open($0) }
-                        .transition(.opacity.combined(with: .scale(scale: 0.92, anchor: .top)))
-                case .open:
-                    OpenContent(summary: summary, count: count, notch: island.notch.height) { island.open($0) }
-                        .transition(.opacity.combined(with: .scale(scale: 0.95, anchor: .top)))
-                }
-            }
-            .padding(.horizontal, Self.ear)
-            .frame(width: size.width, height: size.height, alignment: .top)
-            .background(.black, in: NotchShape(ear: Self.ear, radius: mode == .rest ? 10 : 26))
-            .shadow(color: .black.opacity(mode == .rest ? 0 : 0.4), radius: 18, y: 8)
-            .contentShape(NotchShape(ear: Self.ear, radius: 26))
+            IslandSurface(
+                mode: island.mode,
+                size: island.size(for: island.mode),
+                notch: island.notch.height,
+                summary: summary,
+                options: options,
+                isSyncing: syncing,
+                open: { island.open($0) },
+                tap: { island.click() },
+                copied: { island.copied() }
+            )
             .onHover { island.hover($0) }
             Spacer(minLength: 0)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        .onAppear { island.setCompact(compact) }
+        .onChange(of: compact) { _, value in island.setCompact(value) }
+        .onChange(of: options) { island.update() }
+    }
+}
+
+/// Logo gibi yalnızca siyah ve beyaz: siyah çentik, beyaz kemer, beyaz yazı. Renk yok;
+/// yeniyi parlaklık ve ağırlık anlatır. Ayarlardaki önizleme de bunu çizer.
+struct IslandSurface: View {
+    let mode: MailIsland.Mode
+    let size: CGSize
+    let notch: CGFloat
+    let summary: WidgetSnapshot
+    let options: IslandOptions
+    var isSyncing = false
+    let open: (PostaLink) -> Void
+    let tap: () -> Void
+    var copied: () -> Void = {}
+
+    /// İnsanlardan gelen okunmamışlar; seçilirse Akış da eklenir
+    static func badge(summary: WidgetSnapshot, options: IslandOptions) -> Int {
+        summary.accounts.reduce(0) { $0 + $1.people + (options.badge == .everything ? $1.feed : 0) }
+    }
+
+    /// İki yanda da gösterilecek bir şey kalmadıysa
+    static func isCompact(summary: WidgetSnapshot, options: IslandOptions) -> Bool {
+        let badge = badge(summary: summary, options: options)
+        let showsLeading = options.leading != .hidden && !(options.hidesWhenRead && badge == 0)
+        let showsBadge = options.badge != .hidden && badge > 0
+        return !showsLeading && !showsBadge
+    }
+
+    var body: some View {
+        let people = summary.accounts.reduce(0) { $0 + $1.people }
+
+        ZStack(alignment: .top) {
+            switch mode {
+            case .rest:
+                rest
+                    .contentShape(Rectangle())
+                    .onTapGesture(perform: tap)
+            case .peek(let peek):
+                PeekContent(peek: peek, notch: notch, showsSubject: options.showsSubject, open: open)
+                    .transition(.opacity.combined(with: .scale(scale: 0.92, anchor: .top)))
+            case .code(let code):
+                CodeContent(code: code, notch: notch, copied: copied)
+                    .transition(.opacity.combined(with: .scale(scale: 0.92, anchor: .top)))
+            case .open:
+                OpenContent(summary: summary, count: people, notch: notch, options: options, open: open)
+                    .transition(.opacity.combined(with: .scale(scale: 0.95, anchor: .top)))
+            }
+        }
+        .padding(.horizontal, IslandView.ear)
+        .frame(width: size.width, height: size.height, alignment: .top)
+        .clipped()
+        .background(.black, in: NotchShape(ear: IslandView.ear, radius: mode == .rest ? 10 : 26))
+        .shadow(color: .black.opacity(mode == .rest ? 0 : 0.4), radius: 18, y: 8)
+        .contentShape(NotchShape(ear: IslandView.ear, radius: 26))
         .environment(\.colorScheme, .dark)
     }
 
-    /// Dinlenirken: solda kemer, sağda insanlardan gelen yeni sayısı. Her şey okunmuşsa kemer söner,
-    /// eşitlenirken yavaşça nefes alır.
-    private func rest(count: Int) -> some View {
-        let syncing = store.syncPhase == .syncing || store.overallSyncProgress != nil
+    /// Dinlenirken: solda kemer ya da son yazanın baş harfleri, sağda yeni sayısı. Her şey okunmuşsa
+    /// kemer söner, eşitlenirken yavaşça nefes alır.
+    private var rest: some View {
+        let badge = Self.badge(summary: summary, options: options)
+        let showsLeading = options.leading != .hidden && !(options.hidesWhenRead && badge == 0)
+        let latest = summary.people.filter(\.isUnread).max { $0.date < $1.date }
+
         return HStack {
-            IslandMark(size: 13, isSyncing: syncing)
-                .opacity(count > 0 || syncing ? 1 : 0.45)
+            if showsLeading {
+                if options.leading == .sender, let latest {
+                    IslandAvatar(name: latest.sender, size: min(20, notch - 8))
+                        .transition(.opacity.combined(with: .scale(scale: 0.6)))
+                } else {
+                    IslandMark(size: 13, isSyncing: isSyncing)
+                        .opacity(badge > 0 || isSyncing ? 1 : 0.45)
+                }
+            }
             Spacer()
-            if count > 0 {
-                Text(count, format: .number)
+            if options.badge != .hidden, badge > 0 {
+                Text(badge, format: .number)
                     .font(.system(size: 13, weight: .semibold))
                     .monospacedDigit()
                     .foregroundStyle(.white)
-                    .contentTransition(.numericText(value: Double(count)))
+                    .contentTransition(.numericText(value: Double(badge)))
                     .transition(.opacity.combined(with: .scale(scale: 0.6)))
             }
         }
         .padding(.horizontal, 14)
-        .frame(height: island.notch.height)
-        .animation(MailIsland.spring, value: count)
+        .frame(height: notch)
+        .animation(MailIsland.spring, value: badge)
     }
 }
 
@@ -257,6 +386,7 @@ private struct IslandMark: View {
 private struct PeekContent: View {
     let peek: MailIsland.Peek
     let notch: CGFloat
+    var showsSubject = true
     let open: (PostaLink) -> Void
 
     var body: some View {
@@ -272,7 +402,7 @@ private struct PeekContent: View {
                             .foregroundStyle(.white.opacity(0.45))
                     }
                 }
-                Text(peek.subject)
+                Text(showsSubject ? peek.subject : String(localized: "New message"))
                     .font(.system(size: 12.5))
                     .foregroundStyle(.white.opacity(0.55))
             }
@@ -297,17 +427,62 @@ private struct PeekContent: View {
     }
 }
 
+/// Doğrulama kodu: kimden geldiği, iri ve aralıklı rakamlar, yanında beyaz bir Kopyala
+private struct CodeContent: View {
+    let code: MailIsland.Code
+    let notch: CGFloat
+    let copied: () -> Void
+    @State private var isCopied = false
+
+    var body: some View {
+        HStack(spacing: 14) {
+            VStack(alignment: .leading, spacing: 3) {
+                Text(code.sender)
+                    .font(.system(size: 12, weight: .medium))
+                    .foregroundStyle(.white.opacity(0.55))
+                    .lineLimit(1)
+                Text(verbatim: code.code)
+                    .font(.system(size: 24, weight: .semibold))
+                    .monospacedDigit()
+                    .tracking(3)
+                    .textSelection(.enabled)
+            }
+            Spacer(minLength: 8)
+            Button {
+                NSPasteboard.general.clearContents()
+                NSPasteboard.general.setString(code.code, forType: .string)
+                withAnimation(.snappy(duration: 0.2)) { isCopied = true }
+                copied()
+            } label: {
+                Label(isCopied ? "Copied" : "Copy", systemImage: isCopied ? "checkmark" : "doc.on.doc")
+                    .font(.system(size: 12, weight: .semibold))
+                    .foregroundStyle(.black)
+                    .padding(.horizontal, 15)
+                    .frame(height: 30)
+                    .background(.white, in: Capsule())
+                    .contentTransition(.symbolEffect(.replace))
+            }
+            .buttonStyle(.plain)
+            .handCursor()
+        }
+        .padding(.horizontal, 20)
+        .padding(.top, notch + 8)
+        .foregroundStyle(.white)
+    }
+}
+
 /// Fareyle üzerine gelince: son konuşmalar, Akış ve kısayollar
 private struct OpenContent: View {
     let summary: WidgetSnapshot
     let count: Int
     let notch: CGFloat
+    let options: IslandOptions
     let open: (PostaLink) -> Void
 
     var body: some View {
         let rows = summary.people
             .sorted { ($0.isUnread ? 1 : 0, $0.date) > ($1.isUnread ? 1 : 0, $1.date) }
-            .prefix(4)
+            .prefix(options.rows)
 
         VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .center, spacing: 10) {
@@ -316,9 +491,12 @@ private struct OpenContent: View {
                     .font(.system(size: 15, weight: .semibold))
                     .tracking(-0.2)
                 Spacer(minLength: 8)
-                IslandIconButton(symbol: "square.and.pencil", help: String(localized: "New message")) { open(.compose(account: nil)) }
-                IslandIconButton(symbol: "arrow.up.forward", help: String(localized: "Open Nook")) { open(.inbox(account: nil)) }
+                if options.showsActions {
+                    IslandIconButton(symbol: "square.and.pencil", help: String(localized: "New message")) { open(.compose(account: nil)) }
+                    IslandIconButton(symbol: "arrow.up.forward", help: String(localized: "Open Nook")) { open(.inbox(account: nil)) }
+                }
             }
+            .frame(minHeight: 28)
 
             VStack(spacing: 0) {
                 ForEach(Array(rows)) { conversation in
@@ -333,7 +511,7 @@ private struct OpenContent: View {
             }
             .padding(.horizontal, -8)
 
-            if summary.splitInbox {
+            if summary.splitInbox && options.showsFeed {
                 FeedLine(summary: summary) { open(.inbox(account: nil)) }
             }
         }

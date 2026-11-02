@@ -100,6 +100,14 @@ final class MailStore {
     private(set) var senderOverrides = UserDefaults.standard.dictionary(forKey: SettingsKey.senderOverrides) as? [String: Bool] ?? [:] {
         didSet { UserDefaults.standard.set(senderOverrides, forKey: SettingsKey.senderOverrides) }
     }
+    /// Abonelikten çıkılan göndericiler ve tarihi
+    private(set) var unsubscribedSenders = (UserDefaults.standard.dictionary(forKey: SettingsKey.unsubscribedSenders) as? [String: Date]) ?? [:] {
+        didSet {
+            // Örnek verideki göndericiler gerçek tercihlere yazılmaz
+            guard !DemoData.isEnabled else { return }
+            UserDefaults.standard.set(unsubscribedSenders, forKey: SettingsKey.unsubscribedSenders)
+        }
+    }
     var showsOlderPeople = false
     var showsOlderStacks = false
     /// Okuma alanının altındaki hızlı yanıtta yazılanlar; thread başına, yalnızca bellekte
@@ -1721,6 +1729,36 @@ final class MailStore {
             try? await Task.sleep(for: .seconds(undoable ? 5 : 3))
             guard !Task.isCancelled, let self, self.toast?.id == toast.id else { return }
             withAnimation(.smooth(duration: 0.3)) { self.toast = nil }
+        }
+    }
+
+    // MARK: Abonelikten çıkma
+
+    func isUnsubscribed(_ stack: SenderStack) -> Bool { unsubscribedSenders[stack.id] != nil }
+
+    /// Göndericiden çıkar; istenirse mailleri de arşivler
+    func unsubscribe(_ stack: SenderStack, archive: Bool) {
+        let name = stack.name
+        let ids = stack.threads.map(\.id)
+        Task {
+            do {
+                // Örnek veri modunda ağ yok; yalnızca sonuç gösterilir
+                let outcome = try await engine?.unsubscribe(from: stack) ?? .done
+                switch outcome {
+                case .done:
+                    unsubscribedSenders[stack.id] = .now
+                    if archive { self.archive(ids) }
+                    showToast(String(localized: "Unsubscribed from \(name)"), symbol: "checkmark.circle")
+                case .openedInBrowser:
+                    unsubscribedSenders[stack.id] = .now
+                    if archive { self.archive(ids) }
+                    showToast(String(localized: "Finish unsubscribing on \(name)'s page in your browser"), symbol: "safari")
+                case .unavailable:
+                    showToast(String(localized: "\(name) doesn't offer a way to unsubscribe"), symbol: "exclamationmark.triangle", isError: true)
+                }
+            } catch {
+                showToast(String(localized: "Couldn't unsubscribe: \(error.localizedDescription)"), symbol: "exclamationmark.triangle", isError: true)
+            }
         }
     }
 

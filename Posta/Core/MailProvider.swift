@@ -51,6 +51,8 @@ protocol MailProvider: Actor {
     /// progress: indirilen ve toplam mail sayısı; yalnızca indirilecek mail varsa çağrılır
     func sync(existing: [Message], state: Data?, progress: @escaping @Sendable (_ done: Int, _ total: Int) -> Void) async throws -> SyncOutput
     func fetchBody(of message: Message) async throws -> FetchedBody
+    /// Mailin List-Unsubscribe başlıkları; yoksa nil
+    func unsubscribeInfo(of message: Message) async throws -> Unsubscribe?
     func apply(_ change: RemoteChange) async throws
     func send(_ outgoing: MIMEBuilder.Outgoing, threadRemoteID: String?) async throws -> SentResult
     /// Sunucu bir değişiklik bildirene kadar bekler (IMAP IDLE). true: senkron gerekli.

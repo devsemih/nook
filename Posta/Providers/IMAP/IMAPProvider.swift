@@ -376,6 +376,7 @@ actor IMAPProvider: MailProvider {
             message.preview = Message.makePreview(plain)
         }
         message.automated = parsed.isAutomated || MailClassifier.isAutomatedContent(message.plainText)
+        message.unsubscribe = parsed.unsubscribe
         return message
     }
 
@@ -393,6 +394,19 @@ actor IMAPProvider: MailProvider {
             }
             let parsed = MIME.message(from: raw)
             return FetchedBody(html: parsed.html, attachments: AttachmentStore.save(parsed.attachments, messageID: message.id))
+        }
+    }
+
+    /// Eski sürümde indirilmiş maillerde abonelik başlıkları saklanmadı; yalnızca o iki başlık okunur
+    func unsubscribeInfo(of message: Message) async throws -> Unsubscribe? {
+        try await withReconnect(fetchClient) {
+            if self.roles.isEmpty { try await self.resolveRoles(using: self.fetchClient) }
+            guard let location = try await self.locate(message, using: self.fetchClient) else { return nil }
+            try await self.fetchClient.select(location.mailbox)
+            let items = try await self.fetchClient.uidFetch([location.uid], items: "(UID BODY.PEEK[HEADER.FIELDS (LIST-UNSUBSCRIBE LIST-UNSUBSCRIBE-POST)])")
+            guard let raw = items.first?.body else { return nil }
+            let part = MIME.parse(raw)
+            return Unsubscribe(header: part.header("list-unsubscribe"), post: part.header("list-unsubscribe-post"))
         }
     }
 

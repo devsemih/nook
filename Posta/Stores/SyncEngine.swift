@@ -14,8 +14,8 @@ final class SyncEngine {
     private var syncingAccounts: Set<UUID> = []
     /// Kullanıcının başlattığı senkronlar (yalnızca bunlar "Eşitleniyor…" gösterir)
     private var visibleSyncs: Set<UUID> = []
-    /// Senkron sürerken gelen istekler; senkron bitince bir kez daha çalışır
-    private var resyncRequested: Set<UUID> = []
+    /// Senkron sürerken gelen istekler; senkron bitince bir kez daha çalışır. Değer: isteklerden biri bildirim istedi mi
+    private var resyncRequested: [UUID: Bool] = [:]
     private var idleTasks: [UUID: Task<Void, Never>] = [:]
     private var lastCleanup: Date = .distantPast
     /// Çevrimdışıyken yapılan, bağlantı gelince sunucuya iletilecek değişiklikler
@@ -162,7 +162,8 @@ final class SyncEngine {
         // Bekleyen değişiklikler senkrondan önce iletilir
         flushDeferred(accountID)
         guard !syncingAccounts.contains(accountID) else {
-            resyncRequested.insert(accountID)
+            // Sessiz bir senkron sürerken gelen yeni mail haberi bildirimini kaybetmesin
+            resyncRequested[accountID] = (resyncRequested[accountID] ?? false) || notify
             return
         }
         syncingAccounts.insert(accountID)
@@ -175,8 +176,8 @@ final class SyncEngine {
             self.visibleSyncs.remove(accountID)
             self.finishProgress(accountID)
             self.updatePhase()
-            if self.resyncRequested.remove(accountID) != nil {
-                self.sync(accountID, notify: notify)
+            if let again = self.resyncRequested.removeValue(forKey: accountID) {
+                self.sync(accountID, notify: again)
             }
         }
     }
@@ -271,7 +272,18 @@ final class SyncEngine {
         let recent = arrivals.filter { $0.message.date > Date.now.addingTimeInterval(-3600) }
         // Çentikteki ada yalnızca insanlardan gelenlerde açılır
         let people = recent.filter { arrival in store.thread(arrival.threadID).map { store.feedSender(of: $0) == nil } ?? false }
-        if let latest = people.last {
+        // Son on beş dakikadaki doğrulama kodu her şeyden önce gelir
+        let codes = recent.filter { $0.message.date > Date.now.addingTimeInterval(-900) }.compactMap { arrival in
+            VerificationCode.find(subject: arrival.message.subject ?? arrival.subject, text: arrival.message.plainText).map { (arrival, $0) }
+        }
+        if let (arrival, code) = codes.last {
+            Log.notifications.info("Doğrulama kodu bulundu")
+            MailIsland.shared.announce(code: MailIsland.Code(
+                threadID: arrival.threadID,
+                sender: NotificationText.sender(arrival.message.from),
+                code: code
+            ))
+        } else if let latest = people.last {
             MailIsland.shared.announce(MailIsland.Peek(
                 threadID: latest.threadID,
                 sender: NotificationText.sender(latest.message.from),
@@ -420,7 +432,8 @@ final class SyncEngine {
         reconcileTasks[accountID] = Task { [weak self] in
             try? await Task.sleep(for: .seconds(4))
             guard !Task.isCancelled else { return }
-            self?.sync(accountID, notify: false)
+            // Bu arada gelen yeni mail de duyurulur; kullanıcının taşıdıkları zaten bilindiği için yeni sayılmaz
+            self?.sync(accountID, notify: true)
         }
     }
 
@@ -462,6 +475,87 @@ final class SyncEngine {
         pending.task.cancel()
         pendingSends[messageID] = nil
         return true
+    }
+
+    // MARK: - Abonelikten çıkma
+
+    enum UnsubscribeOutcome {
+        /// Gönderici isteği aldı (tek tık ya da e-posta)
+        case done
+        /// Göndericinin sayfası tarayıcıda açıldı; çıkışı kullanıcı tamamlar
+        case openedInBrowser
+        /// Gönderici bir yol sunmuyor
+        case unavailable
+    }
+
+    /// Göndericinin en yeni maillerinden abonelik bilgisini bulur ve en sessiz yolla çıkar:
+    /// tek tık varsa arka planda istek, yoksa e-posta, o da yoksa tarayıcı.
+    func unsubscribe(from stack: SenderStack) async throws -> UnsubscribeOutcome {
+        let messages = stack.threads
+            .flatMap { thread in thread.messages.filter { !$0.isDraft }.map { (thread.accountID, $0) } }
+            .sorted { $0.1.date > $1.1.date }
+            .prefix(3)
+        var found: (accountID: UUID, info: Unsubscribe)?
+        for (accountID, message) in messages {
+            if let info = message.unsubscribe {
+                found = (accountID, info)
+                break
+            }
+            guard let account = store.account(accountID), let provider = provider(for: account) else { continue }
+            if let info = try await provider.unsubscribeInfo(of: message) {
+                found = (accountID, info)
+                break
+            }
+        }
+        guard let found else {
+            Log.sync.info("Abonelik: yol yok")
+            return .unavailable
+        }
+
+        if found.info.oneClick, let url = found.info.web {
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+            request.httpBody = Data("List-Unsubscribe=One-Click".utf8)
+            // Çerez ve önbellek taşınmaz
+            let (_, response) = try await URLSession(configuration: .ephemeral).data(for: request)
+            let status = (response as? HTTPURLResponse)?.statusCode ?? 0
+            Log.sync.info("Abonelik: tek tık, durum \(status, privacy: .public)")
+            guard (200..<300).contains(status) else { throw ProviderError.server(String(localized: "The sender didn't accept the request.")) }
+            return .done
+        }
+
+        if let mailto = found.info.mailto,
+           let account = store.account(found.accountID),
+           let provider = provider(for: account),
+           let components = URLComponents(url: mailto, resolvingAgainstBaseURL: false),
+           !components.path.isEmpty {
+            let query = Dictionary((components.queryItems ?? []).map { ($0.name.lowercased(), $0.value ?? "") }, uniquingKeysWith: { first, _ in first })
+            let body = query["body"].flatMap { $0.isEmpty ? nil : $0 } ?? "unsubscribe"
+            let outgoing = MIMEBuilder.Outgoing(
+                from: account.contact,
+                to: [Contact(name: "", address: components.path)],
+                cc: [],
+                subject: query["subject"].flatMap { $0.isEmpty ? nil : $0 } ?? "unsubscribe",
+                html: "<p>\(body.replacingOccurrences(of: "&", with: "&amp;").replacingOccurrences(of: "<", with: "&lt;"))</p>",
+                plainText: body,
+                attachments: [],
+                inReplyTo: nil,
+                references: [],
+                messageID: MIMEBuilder.makeMessageID(for: account.address),
+                date: .now
+            )
+            _ = try await provider.send(outgoing, threadRemoteID: nil)
+            Log.sync.info("Abonelik: e-posta gönderildi")
+            return .done
+        }
+
+        if let url = found.info.web {
+            NSWorkspace.shared.open(url)
+            Log.sync.info("Abonelik: tarayıcıda açıldı")
+            return .openedInBrowser
+        }
+        return .unavailable
     }
 
     // MARK: - Bakım

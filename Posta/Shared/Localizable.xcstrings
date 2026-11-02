@@ -4331,16 +4331,6 @@
         }
       }
     },
-    "When new mail arrives, the notch opens for a few seconds to show who it's from. Hover over it to see recent conversations." : {
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Yeni mail gelince çentik birkaç saniyeliğine açılıp kimden geldiğini gösterir; fareyle üzerine gelince son konuşmalar açılır."
-          }
-        }
-      }
-    },
     "When off, tracking pixels can't run. You can show images in any message with one click." : {
       "localizations" : {
         "tr" : {
@@ -4783,6 +4773,490 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "📎 Ek içeren bir mail"
+          }
+        }
+      }
+    },
+    "Nook mark" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nook işareti"
+          }
+        }
+      }
+    },
+    "Nothing" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hiçbiri"
+          }
+        }
+      }
+    },
+    "Hover" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Üzerine gelince"
+          }
+        }
+      }
+    },
+    "Click" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tıklayınca"
+          }
+        }
+      }
+    },
+    "Nook lives in your notch, even when its window is closed." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nook, penceresi kapalıyken de çentikte durur."
+          }
+        }
+      }
+    },
+    "At rest" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beklerken"
+          }
+        }
+      }
+    },
+    "Left side" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sol taraf"
+          }
+        }
+      }
+    },
+    "Count" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sayı"
+          }
+        }
+      }
+    },
+    "Unread conversations, on the right." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sağ tarafta okunmamış konuşmaların sayısı."
+          }
+        }
+      }
+    },
+    "Hide when everything is read" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Her şey okununca gizle"
+          }
+        }
+      }
+    },
+    "The island folds back into the notch until new mail arrives." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeni mail gelene kadar ada çentiğin içine çekilir."
+          }
+        }
+      }
+    },
+    "New mail" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeni mail"
+          }
+        }
+      }
+    },
+    "Announce new mail" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeni maili göster"
+          }
+        }
+      }
+    },
+    "When someone writes, the island opens for a moment. Mail in the Feed never does this." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biri yazınca ada birkaç saniyeliğine açılır. Akış'taki mailler bunu hiç yapmaz."
+          }
+        }
+      }
+    },
+    "Show the subject" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konuyu göster"
+          }
+        }
+      }
+    },
+    "Turn off to show only who it's from, for example while sharing your screen." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kapatırsan yalnızca kimden geldiği görünür; örneğin ekran paylaşırken işe yarar."
+          }
+        }
+      }
+    },
+    "Stay open for" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Açık kalma süresi"
+          }
+        }
+      }
+    },
+    "%lld seconds" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld saniye"
+          }
+        },
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld second"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld seconds"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Opening" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Açılış"
+          }
+        }
+      }
+    },
+    "Open with" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Açılma şekli"
+          }
+        }
+      }
+    },
+    "Conversations" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konuşma sayısı"
+          }
+        }
+      }
+    },
+    "Show the Feed" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Akış'ı göster"
+          }
+        }
+      }
+    },
+    "A single line with what's new in the Feed." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Akış'taki yenilikler tek satırda."
+          }
+        }
+      }
+    },
+    "Show buttons" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Düğmeleri göster"
+          }
+        }
+      }
+    },
+    "New message and Open Nook." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeni mesaj ve Nook'u aç."
+          }
+        }
+      }
+    },
+    "Restore defaults" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Varsayılanlara dön"
+          }
+        }
+      }
+    },
+    "Preview" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Önizleme"
+          }
+        }
+      }
+    },
+    "Dinner on Saturday?" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cumartesi akşam yemeği?"
+          }
+        }
+      }
+    },
+    "island.stage.open" : {
+      "comment" : "Önizlemede adanın açık hali",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Açık"
+          }
+        }
+      }
+    },
+    "Unsubscribe from %@?" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ aboneliğinden çıkılsın mı?"
+          }
+        }
+      }
+    },
+    "Unsubscribe" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abonelikten çık"
+          }
+        }
+      }
+    },
+    "Unsubscribe and Archive All" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çık ve tümünü arşivle"
+          }
+        }
+      }
+    },
+    "Nook asks the sender to stop emailing you. Mail you already have stays where it is." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nook göndericiden sana mail göndermeyi bırakmasını ister. Gelmiş mailler olduğu yerde kalır."
+          }
+        }
+      }
+    },
+    "Unsubscribed" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abonelikten çıkıldı"
+          }
+        }
+      }
+    },
+    "Stop getting mail from this sender" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu göndericiden mail almayı bırak"
+          }
+        }
+      }
+    },
+    "Unsubscribed from %@" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ aboneliğinden çıkıldı"
+          }
+        }
+      }
+    },
+    "Finish unsubscribing on %@'s page in your browser" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çıkışı tarayıcıda açılan %@ sayfasında tamamla"
+          }
+        }
+      }
+    },
+    "%@ doesn't offer a way to unsubscribe" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ abonelikten çıkma yolu sunmuyor"
+          }
+        }
+      }
+    },
+    "Couldn't unsubscribe: %@" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abonelikten çıkılamadı: %@"
+          }
+        }
+      }
+    },
+    "The sender didn't accept the request." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gönderici isteği kabul etmedi."
+          }
+        }
+      }
+    },
+    "Verification codes" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Doğrulama kodları"
+          }
+        }
+      }
+    },
+    "Sign-in codes appear in the notch with a Copy button, even when they come from the Feed." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giriş kodları, Akış'tan gelseler de çentikte Kopyala düğmesiyle görünür."
+          }
+        }
+      }
+    },
+    "Copy" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopyala"
+          }
+        }
+      }
+    },
+    "Copied" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopyalandı"
+          }
+        }
+      }
+    },
+    "island.stage.code" : {
+      "comment" : "Önizlemede doğrulama kodu hali",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Code"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kod"
           }
         }
       }

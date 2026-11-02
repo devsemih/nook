@@ -12,6 +12,9 @@ struct SettingsView: View {
             Tab("Appearance", systemImage: "paintpalette", value: "appearance") {
                 AppearanceSettings()
             }
+            Tab("Notch", systemImage: "menubar.rectangle", value: "notch") {
+                NotchSettings()
+            }
             Tab("Accounts", systemImage: "at", value: "accounts") {
                 AccountsSettings()
             }
@@ -35,7 +38,6 @@ private struct GeneralSettings: View {
     @AppStorage(SettingsKey.alwaysLoadRemoteImages) private var alwaysLoadRemote = false
     @AppStorage(SettingsKey.darkMailStyle) private var darkMailStyle = DarkMailStyle.lightCard.rawValue
     @AppStorage(SettingsKey.notificationsEnabled) private var notifications = true
-    @AppStorage(SettingsKey.showsIsland) private var showsIsland = true
     @State private var systemAllowsNotifications = true
     @State private var launchAtLogin = SMAppService.mainApp.status == .enabled
 
@@ -87,13 +89,6 @@ private struct GeneralSettings: View {
                 }
             }
 
-            Section("Notch") {
-                SettingRow("Show in the notch", detail: "When new mail arrives, the notch opens for a few seconds to show who it's from. Hover over it to see recent conversations.") {
-                    Toggle("Show in the notch", isOn: $showsIsland)
-                }
-                .onChange(of: showsIsland) { MailIsland.shared.update() }
-            }
-
             Section {
                 SettingRow("Open at login", detail: "When you close the window, Nook keeps running in the background and sending notifications. Quitting with ⌘Q stops notifications.") {
                     Toggle("Open at login", isOn: Binding(get: { launchAtLogin }, set: setLaunchAtLogin))
@@ -139,7 +134,7 @@ private struct GeneralSettings: View {
 
 /// Form satırı: başlık ve açıklama solda, denetim sağda. El imleci yalnızca tıklanan denetimin üzerinde çıkar;
 /// Toggle ya da Picker'ın kendi etiketi kullanılsaydı tıklanmayan başlık da el imleci gösterirdi.
-private struct SettingRow<Control: View>: View {
+struct SettingRow<Control: View>: View {
     let title: LocalizedStringKey
     var detail: LocalizedStringKey?
     @ViewBuilder var control: Control

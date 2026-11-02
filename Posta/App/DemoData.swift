@@ -128,6 +128,10 @@ enum DemoData {
     /// Pencereyi sırayla birkaç duruma getirip kaydeder. Adımlar arasında arayüzün yerleşmesi için kısa beklemeler var.
     static func runCaptures(store: MailStore, themes: ThemeStore) {
         guard let folder = captureFolder else { return }
+        if UserDefaults.standard.string(forKey: "NookCaptureSet") == "video" {
+            runVideoCaptures(store: store, themes: themes, folder: folder)
+            return
+        }
         try? FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
         Task { @MainActor in
             try? await Task.sleep(for: .seconds(2))
@@ -164,11 +168,70 @@ enum DemoData {
         }
     }
 
+    /// Tanıtım videosu için: gelen kutusu, Akış'ta bir gönderici ve Ayarlar'ın Çentik sekmesi; açık ve koyu
+    /// temada, ekranın ölçeğinden bağımsız olarak 2x
+    private static func runVideoCaptures(store: MailStore, themes: ThemeStore, folder: URL) {
+        try? FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
+        Task { @MainActor in
+            try? await Task.sleep(for: .seconds(2))
+            guard let window = store.mainWindow else { return }
+            window.setContentSize(NSSize(width: 1280, height: 800))
+            window.center()
+            let originalTheme = themes.themeID
+            let maya = store.threads.first { $0.subject == "Dinner on Saturday?" }?.id
+            let leo = store.threads.first { $0.subject == "Launch post draft" }?.id
+            let feedKey = store.sidebar.stacks.first { $0.name == "Shipyard CI" }?.id
+
+            for (theme, suffix) in [("paper", "light"), ("ink", "dark")] {
+                themes.themeID = theme
+                store.select(maya)
+                try? await Task.sleep(for: .seconds(1.5))
+                capture(window, to: folder.appendingPathComponent("main-\(suffix).png"), scale: 2)
+
+                store.select(leo)
+                try? await Task.sleep(for: .seconds(1.5))
+                capture(window, to: folder.appendingPathComponent("leo-\(suffix).png"), scale: 2)
+
+
+                store.select(item: feedKey.map { .stack($0) })
+                try? await Task.sleep(for: .seconds(1.5))
+                capture(window, to: folder.appendingPathComponent("feed-\(suffix).png"), scale: 2)
+
+                // Ayarlar menüdeki gibi açılır, Çentik sekmesinde
+                UserDefaults.standard.set("notch", forKey: "settingsTab")
+                if let menu = NSApp.mainMenu?.items.first?.submenu,
+                   let index = menu.items.firstIndex(where: { $0.title.hasPrefix("Settings") }) {
+                    menu.performActionForItem(at: index)
+                }
+                try? await Task.sleep(for: .seconds(1.5))
+                if let settings = NSApp.windows.first(where: { $0.isVisible && $0 !== window && $0.title == "Notch" }) {
+                    capture(settings, to: folder.appendingPathComponent("settings-\(suffix).png"), scale: 2)
+                    settings.close()
+                }
+                try? await Task.sleep(for: .seconds(0.5))
+            }
+            themes.themeID = originalTheme
+            NSApp.terminate(nil)
+        }
+    }
+
     /// Pencerenin çerçevesiyle birlikte çizimi; ekran kaydı izni gerekmez
-    static func capture(_ window: NSWindow, to url: URL) {
+    static func capture(_ window: NSWindow, to url: URL, scale: CGFloat? = nil) {
         guard let view = window.contentView?.superview ?? window.contentView else { return }
         let rect = view.bounds
-        guard let rep = view.bitmapImageRepForCachingDisplay(in: rect) else { return }
+        let rep: NSBitmapImageRep?
+        if let scale {
+            // Piksel boyutu nokta boyutunun katı olunca çizim o ölçekte yapılır
+            rep = NSBitmapImageRep(
+                bitmapDataPlanes: nil, pixelsWide: Int(rect.width * scale), pixelsHigh: Int(rect.height * scale),
+                bitsPerSample: 8, samplesPerPixel: 4, hasAlpha: true, isPlanar: false,
+                colorSpaceName: .deviceRGB, bytesPerRow: 0, bitsPerPixel: 0
+            )
+            rep?.size = rect.size
+        } else {
+            rep = view.bitmapImageRepForCachingDisplay(in: rect)
+        }
+        guard let rep else { return }
         view.cacheDisplay(in: rect, to: rep)
         try? rep.representation(using: .png, properties: [:])?.write(to: url)
     }

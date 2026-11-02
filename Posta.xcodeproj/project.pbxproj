@@ -61,11 +61,14 @@
 		C1A65AF5D5977EA05C86861B /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74800362B3F6691802045AC2 /* Components.swift */; };
 		C2D90A14C267735B28330795 /* MIMEBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0024B7414E0BDEA9463B5254 /* MIMEBuilder.swift */; };
 		C521674F53916EB596001AE0 /* MailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F24A2C80B8CBFE4C91F567 /* MailProvider.swift */; };
+		C52A622B43E01B1ADEE97C03 /* VerificationCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA9C6D9A0F2D3BD7F3E98DF /* VerificationCode.swift */; };
 		C5CB816ED0964AA0BA0006E5 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAAC2933AB1482BD0D6AA1F /* Provider.swift */; };
 		CAA69A36E2826A98AE14CF26 /* Nook.icon in Resources */ = {isa = PBXBuildFile; fileRef = 866433335BAFF7202E9890DC /* Nook.icon */; };
 		CC625CE0F6E159474074E541 /* Inbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84433B092BD31B0474B2B38E /* Inbox.swift */; };
 		CC71AFB2EBB3A74CB1B743A0 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 417BECC1EF009E8B0FBA2843 /* GRDB */; };
+		DBEA58DD8D1F162F32C90B66 /* NotchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359209B78125DE47E25C7F20 /* NotchSettings.swift */; };
 		DC5B89BE3E1EF7C4C8EBAE4F /* LocalDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D137530A95327C4468977D5 /* LocalDatabase.swift */; };
+		DD6C36A9737E2F129CE70051 /* IslandOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0814013B8428EC9567AADD /* IslandOptions.swift */; };
 		DE882182054629FAE7FE6F83 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2C39A787381B85403D54B8 /* Theme.swift */; };
 		E155D8DD85E3660B97BB6CF0 /* IMAPProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDFE3BAFF10F652F1A82BB2 /* IMAPProvider.swift */; };
 		E713B47DEB3D471FD09DC033 /* PostaCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AEB13147444F91DC411617 /* PostaCommands.swift */; };
@@ -114,6 +117,7 @@
 		0BBF9F2ACA84DD4B46929487 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		0C2D1A437F9793FD28E6B716 /* StreamConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamConnection.swift; sourceTree = "<group>"; };
 		1857E07BFD612D40A1CF1801 /* ComposerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerView.swift; sourceTree = "<group>"; };
+		1C0814013B8428EC9567AADD /* IslandOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IslandOptions.swift; sourceTree = "<group>"; };
 		1EE216A71E8F2941964D41B8 /* QuickReplyBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickReplyBar.swift; sourceTree = "<group>"; };
 		246DACF62A4CD966EEDA30E2 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		248C0E4B4586015CA5B8737A /* RecipientField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientField.swift; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 		30277057B8A3A148E69DC8BA /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		337E36311AB841CE15B215F3 /* Posta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35682EBB0843E1CFC4E8A805 /* RichTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTextEditor.swift; sourceTree = "<group>"; };
+		359209B78125DE47E25C7F20 /* NotchSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchSettings.swift; sourceTree = "<group>"; };
 		35F413FDAA6886AE964E2576 /* PostaWidgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PostaWidgets.entitlements; sourceTree = "<group>"; };
 		44BB48B28A8B1DF690AA28F3 /* Posta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Posta.entitlements; sourceTree = "<group>"; };
 		4555795B1750EA163E59D71A /* SenderStackRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderStackRow.swift; sourceTree = "<group>"; };
@@ -153,6 +158,7 @@
 		9D137530A95327C4468977D5 /* LocalDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDatabase.swift; sourceTree = "<group>"; };
 		A1A03FB171FA93D3BF398DD6 /* ReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderView.swift; sourceTree = "<group>"; };
 		A8128E40A1D0DC077E8207A3 /* SMTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMTPClient.swift; sourceTree = "<group>"; };
+		ABA9C6D9A0F2D3BD7F3E98DF /* VerificationCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCode.swift; sourceTree = "<group>"; };
 		AEB34BDE9940BFA2A11D6498 /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
 		B62EC22FD862BE325B9CE1E5 /* AppearanceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSettings.swift; sourceTree = "<group>"; };
 		B68DF297DF5925C7A9BCB3E5 /* ArchLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchLine.swift; sourceTree = "<group>"; };
@@ -217,6 +223,7 @@
 				5B261EDC7013B2606A607E2D /* MailClassifier.swift */,
 				66F24A2C80B8CBFE4C91F567 /* MailProvider.swift */,
 				30277057B8A3A148E69DC8BA /* Models.swift */,
+				ABA9C6D9A0F2D3BD7F3E98DF /* VerificationCode.swift */,
 				B33A1B56F1217B2C2D2EF77B /* MIME */,
 				DF3BA91D67E01BCB6A4D918C /* Storage */,
 			);
@@ -343,6 +350,7 @@
 		7EDEEBA6C342860773F403EA /* Island */ = {
 			isa = PBXGroup;
 			children = (
+				1C0814013B8428EC9567AADD /* IslandOptions.swift */,
 				CFDC8CC31AA9FDAA17BCAE92 /* MailIsland.swift */,
 			);
 			path = Island;
@@ -410,6 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				B62EC22FD862BE325B9CE1E5 /* AppearanceSettings.swift */,
+				359209B78125DE47E25C7F20 /* NotchSettings.swift */,
 				DF7F1B1C14B3F2AE3149CF71 /* SettingsView.swift */,
 			);
 			path = Settings;
@@ -616,6 +625,7 @@
 				687322B0B0E7B2946A423413 /* IMAPClient.swift in Sources */,
 				E155D8DD85E3660B97BB6CF0 /* IMAPProvider.swift in Sources */,
 				25A270B91F397F00B6B82CAC /* IMAPValue.swift in Sources */,
+				DD6C36A9737E2F129CE70051 /* IslandOptions.swift in Sources */,
 				FCBDA266B84BEEA1224ADA94 /* KeyboardRouter.swift in Sources */,
 				FFB174125AFC8C438AEFA133 /* Keychain.swift in Sources */,
 				DC5B89BE3E1EF7C4C8EBAE4F /* LocalDatabase.swift in Sources */,
@@ -631,6 +641,7 @@
 				4A794CB7C7870A874694C5F3 /* MessageView.swift in Sources */,
 				6E0F91FF07B2EC011C887C5C /* Models.swift in Sources */,
 				7D3F107F9CEAF2701C142861 /* Monogram.swift in Sources */,
+				DBEA58DD8D1F162F32C90B66 /* NotchSettings.swift in Sources */,
 				752D1B517C2F60AEF7049A7A /* NotificationService.swift in Sources */,
 				B3DE7FFB0E8CF2538F0C7D6A /* NotificationText.swift in Sources */,
 				4E9D4FC61C9C25DFD0C49BAB /* PostaApp.swift in Sources */,
@@ -650,6 +661,7 @@
 				3C1F20F77172EA8CFDB9DA47 /* SyncEngine.swift in Sources */,
 				DE882182054629FAE7FE6F83 /* Theme.swift in Sources */,
 				96C3647632251D2677A3FA0F /* ThreadRow.swift in Sources */,
+				C52A622B43E01B1ADEE97C03 /* VerificationCode.swift in Sources */,
 				5C8AB3940305129B8A03AACD /* WelcomeView.swift in Sources */,
 				0DAF37E8D6C25A7C61B6BB40 /* WidgetPublisher.swift in Sources */,
 				69028A9A154017EE61985668 /* WidgetSnapshot.swift in Sources */,
@@ -732,14 +744,14 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = PostaWidgets/PostaWidgets.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PostaWidgets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Nook;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Odin Studio";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.odinstudio.posta.widgets;
 				PRODUCT_NAME = PostaWidgets;
 				SDKROOT = macosx;
@@ -756,7 +768,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Posta/Posta.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Posta/Info.plist;
@@ -767,7 +779,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.odinstudio.posta;
 				PRODUCT_MODULE_NAME = Posta;
 				PRODUCT_NAME = Nook;
@@ -783,7 +795,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Posta/Posta.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Posta/Info.plist;
@@ -794,7 +806,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.odinstudio.posta;
 				PRODUCT_MODULE_NAME = Posta;
 				PRODUCT_NAME = Nook;
@@ -808,14 +820,14 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = PostaWidgets/PostaWidgets.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PostaWidgets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Nook;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Odin Studio";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.odinstudio.posta.widgets;
 				PRODUCT_NAME = PostaWidgets;
 				SDKROOT = macosx;

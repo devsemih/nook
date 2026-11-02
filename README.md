@@ -56,6 +56,8 @@ Every sender in the Feed is a single row, no matter how many messages they send.
 
 On Macs with a notch, Nook lives right inside it. At rest it shows how many people are waiting for you. When someone writes, it opens for a moment to show who it is. Hover to see your latest conversations and jump straight in.
 
+Sign-in codes show up there too, with a Copy button, so you never have to open the email. And it's yours to shape: choose what it shows at rest, whether new mail opens it, how long it stays, and whether it opens on hover or on click.
+
 <p align="center">
   <img src="docs/images/notch.png" width="500" alt="The Nook notch island opened, listing recent conversations">
 </p>
@@ -74,6 +76,7 @@ Six desktop widgets in the same black and white style: who wrote to you, the lat
 - **All your accounts in one place.** iCloud and as many Gmail accounts as you like, unified or one at a time.
 - **Built for the keyboard.** Quick switcher, shortcuts for everything, Enter to open, E to archive.
 - **Quick replies** right under a conversation, with a full composer when you need it.
+- **Unsubscribe in one click.** Nook uses the sender's own unsubscribe link, quietly in the background when the sender supports it.
 - **Themes.** Black and white by default, with Paper and Ink variants and a handful of colourful ones.
 - **Blocks trackers.** Remote images stay off until you allow them.
 
