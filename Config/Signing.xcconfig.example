@@ -1,0 +1,8 @@
+// Kendi Apple geliştirici ekibinle imzalamak için bu dosyayı Signing.xcconfig adıyla kopyala
+// ve ekip kimliğini yaz. Dosya git'e girmez.
+// To sign with your own Apple developer team, copy this file to Signing.xcconfig and set your team ID.
+// The file is ignored by git.
+
+DEVELOPMENT_TEAM = ABCDE12345
+CODE_SIGN_STYLE = Automatic
+CODE_SIGN_IDENTITY = Apple Development

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Uygulama ile widget'ların ortak kabı; imzalayan ekibin kimliğiyle başlar -->
+	<key>NookAppGroup</key>
+	<string>$(TeamIdentifierPrefix)com.odinstudio.posta</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.odinstudio.posta</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>posta</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,4792 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "!" : {
+      "shouldTranslate" : false,
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "!"
+          }
+        }
+      }
+    },
+    "%@" : {
+      "shouldTranslate" : false,
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "%@ <%@>" : {
+      "shouldTranslate" : false,
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ <%2$@>"
+          }
+        }
+      }
+    },
+    "%@ added, downloading mail" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ eklendi, mailler indiriliyor"
+          }
+        }
+      }
+    },
+    "%@ and %@" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ ve %2$@"
+          }
+        }
+      }
+    },
+    "%@ is empty" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ boş"
+          }
+        }
+      }
+    },
+    "%@ is now in Feed" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ artık Akış'ta"
+          }
+        }
+      }
+    },
+    "%@ is now in People" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ artık İnsanlar'da"
+          }
+        }
+      }
+    },
+    "%@ isn't a valid address" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ geçerli bir adres değil"
+          }
+        }
+      }
+    },
+    "%@ reconnected" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ yeniden bağlandı"
+          }
+        }
+      }
+    },
+    "%@ removed" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ kaldırıldı"
+          }
+        }
+      }
+    },
+    "%@ wrote:" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ şunu yazdı:"
+          }
+        }
+      }
+    },
+    "%@ · %@" : {
+      "shouldTranslate" : false,
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · %2$@"
+          }
+        }
+      }
+    },
+    "%@ · Downloading %lld%%" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · İndiriliyor %%%2$lld"
+          }
+        }
+      }
+    },
+    "%@ · New mail from %lld people" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · %2$lld kişiden yeni mail"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · New mail from %#@people@"
+          },
+          "substitutions" : {
+            "people" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg person"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg people"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%@ · Offline" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · Çevrimdışı"
+          }
+        }
+      }
+    },
+    "%@, %@, and %lld more" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %2$@ ve %3$lld kişi daha"
+          }
+        }
+      }
+    },
+    "%lld" : {
+      "shouldTranslate" : false,
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        }
+      }
+    },
+    "%lld attachments" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld ek"
+          }
+        },
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld attachment"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld attachments"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld earlier messages" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld eski mesaj"
+          }
+        },
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld earlier message"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld earlier messages"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld emails" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld mail"
+          }
+        },
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld email"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld emails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld messages" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld mesaj"
+          }
+        },
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld message"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld messages"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld messages · %@" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld mail · %2$@"
+          }
+        }
+      }
+    },
+    "%lld more people" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld kişi daha"
+          }
+        },
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld more person"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld more people"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld more senders" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld gönderici daha"
+          }
+        },
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld more sender"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld more senders"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld new" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld yeni"
+          }
+        }
+      }
+    },
+    "%lld new conversations" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld yeni konuşma"
+          }
+        },
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld new conversation"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld new conversations"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld new in Feed" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Akış'ta %lld yeni"
+          }
+        }
+      }
+    },
+    "%lld new messages" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld yeni mail"
+          }
+        },
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld new message"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld new messages"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld older conversations" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld eski konuşma"
+          }
+        },
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld older conversation"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld older conversations"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld older senders" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld eski gönderici"
+          }
+        },
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld older sender"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld older senders"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld people\nwrote to you" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld kişi\nsana yazdı"
+          }
+        },
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld person\nwrote to you"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld people\nwrote to you"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld people are waiting for you" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld kişi seni bekliyor"
+          }
+        },
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld person is waiting for you"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld people are waiting for you"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld unread" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld okunmamış"
+          }
+        }
+      }
+    },
+    "(No subject)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(Konu yok)"
+          }
+        }
+      }
+    },
+    "**%@** and **%@** wrote to you" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**%1$@** ve **%2$@** sana yazdı"
+          }
+        }
+      }
+    },
+    "**%@** wrote to you" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**%@** sana yazdı"
+          }
+        }
+      }
+    },
+    "**%@**, **%@**, and **%@** wrote to you" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**%1$@**, **%2$@** ve **%3$@** sana yazdı"
+          }
+        }
+      }
+    },
+    "**%@**, **%@**, and **%lld others** wrote to you" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**%1$@**, **%2$@** ve **%3$lld kişi** daha yazdı"
+          }
+        }
+      }
+    },
+    "**2-Step Verification** must be turned on for your Google Account." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Google hesabında **2 adımlı doğrulama** açık olmalı."
+          }
+        }
+      }
+    },
+    "+%lld" : {
+      "shouldTranslate" : false,
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld"
+          }
+        }
+      }
+    },
+    ", **%lld new** in Feed." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ", Akış'ta **%lld yeni** var."
+          }
+        }
+      }
+    },
+    "99+" : {
+      "shouldTranslate" : false,
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "99+"
+          }
+        }
+      }
+    },
+    "A calm, people-first mail client." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İnsanları öne alan, sakin bir mail uygulaması."
+          }
+        }
+      }
+    },
+    "About the invoice" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fatura hakkında"
+          }
+        }
+      }
+    },
+    "Accent color" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vurgu rengi"
+          }
+        }
+      }
+    },
+    "Account" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesap"
+          }
+        }
+      }
+    },
+    "Account connected" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bağlandı"
+          }
+        }
+      }
+    },
+    "Accounts" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesaplar"
+          }
+        }
+      }
+    },
+    "Accounts and drafts are kept; mail is downloaded again from the server." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesaplar ve taslaklar kalır, mailler sunucudan yeniden indirilir."
+          }
+        }
+      }
+    },
+    "Actions" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eylemler"
+          }
+        }
+      }
+    },
+    "Add" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ekle"
+          }
+        }
+      }
+    },
+    "Add Account…" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesap Ekle…"
+          }
+        }
+      }
+    },
+    "Add a recipient first" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Önce bir alıcı ekle"
+          }
+        }
+      }
+    },
+    "Add account" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesap ekle"
+          }
+        }
+      }
+    },
+    "Address" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adres"
+          }
+        }
+      }
+    },
+    "Advanced" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gelişmiş"
+          }
+        }
+      }
+    },
+    "After 2 seconds" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2 saniye sonra"
+          }
+        }
+      }
+    },
+    "All\ncaught up" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hepsi\nokundu"
+          }
+        }
+      }
+    },
+    "All Accounts" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tüm Hesaplar"
+          }
+        }
+      }
+    },
+    "All accounts" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tüm hesaplar"
+          }
+        }
+      }
+    },
+    "All caught up" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Her şey okundu"
+          }
+        }
+      }
+    },
+    "All read" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hepsi okundu"
+          }
+        }
+      }
+    },
+    "Always load remote images" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uzak görselleri her zaman yükle"
+          }
+        }
+      }
+    },
+    "An app password has 16 letters (xxxx xxxx xxxx xxxx). Paste the password you created, not your Google password." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uygulama şifresi 16 harften oluşur (xxxx xxxx xxxx xxxx). Google şifreni değil, oluşturduğun şifreyi yapıştır."
+          }
+        }
+      }
+    },
+    "An app-specific password has 16 letters (xxxx-xxxx-xxxx-xxxx). Paste the password you created, not your Apple Account password." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uygulamaya özel şifre 16 harften oluşur (xxxx-xxxx-xxxx-xxxx). Apple ID şifreni değil, oluşturduğun şifreyi yapıştır."
+          }
+        }
+      }
+    },
+    "Appearance" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Görünüm"
+          }
+        }
+      }
+    },
+    "Archive" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arşiv"
+          }
+        }
+      }
+    },
+    "Archive  (E)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arşivle  (E)"
+          }
+        }
+      }
+    },
+    "Archive (E)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arşivle (E)"
+          }
+        }
+      }
+    },
+    "Archive All" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tümünü Arşivle"
+          }
+        }
+      }
+    },
+    "Archive all (E)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tümünü arşivle (E)"
+          }
+        }
+      }
+    },
+    "Archive all messages from this sender (E)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu göndericinin tüm maillerini arşivle (E)"
+          }
+        }
+      }
+    },
+    "Archived" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arşivlendi"
+          }
+        }
+      }
+    },
+    "Ash" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kül"
+          }
+        }
+      }
+    },
+    "Attach file" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dosya ekle"
+          }
+        }
+      }
+    },
+    "Audio" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ses"
+          }
+        }
+      }
+    },
+    "Back" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geri"
+          }
+        }
+      }
+    },
+    "Back online" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bağlantı geri geldi"
+          }
+        }
+      }
+    },
+    "Back online, syncing pending changes" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bağlantı geri geldi, bekleyen değişiklikler iletiliyor"
+          }
+        }
+      }
+    },
+    "Blue" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mavi"
+          }
+        }
+      }
+    },
+    "Bold (⌘B)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalın (⌘B)"
+          }
+        }
+      }
+    },
+    "Bold, italic, underline" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalın, italik, altı çizili"
+          }
+        }
+      }
+    },
+    "Book recommendation" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kitap önerisi"
+          }
+        }
+      }
+    },
+    "Breakfast on Saturday?" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cumartesi kahvaltı?"
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vazgeç"
+          }
+        }
+      }
+    },
+    "Cc" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bilgi"
+          }
+        }
+      }
+    },
+    "Change folder (⌥⌘1…7)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klasör değiştir (⌥⌘1…7)"
+          }
+        }
+      }
+    },
+    "Changes will sync when you're back online" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Değişiklikler bağlantı gelince iletilecek"
+          }
+        }
+      }
+    },
+    "Clear" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Temizle"
+          }
+        }
+      }
+    },
+    "Clear and download again" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Temizle ve yeniden indir"
+          }
+        }
+      }
+    },
+    "Click to open" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Açmak için tıkla"
+          }
+        }
+      }
+    },
+    "Click to sync now" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şimdi eşitlemek için tıkla"
+          }
+        }
+      }
+    },
+    "Close and save as draft (Esc)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kapat ve taslak olarak kaydet (Esc)"
+          }
+        }
+      }
+    },
+    "Close reply, back to list" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yanıtı kapat, listeye dön"
+          }
+        }
+      }
+    },
+    "Close search" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aramayı kapat"
+          }
+        }
+      }
+    },
+    "Color" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renk"
+          }
+        }
+      }
+    },
+    "Connect" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bağlan"
+          }
+        }
+      }
+    },
+    "Connect your Gmail account" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gmail hesabını bağla"
+          }
+        }
+      }
+    },
+    "Connect your first account" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İlk hesabını bağla"
+          }
+        }
+      }
+    },
+    "Connect your iCloud account" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud hesabını bağla"
+          }
+        }
+      }
+    },
+    "Connected" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bağlı"
+          }
+        }
+      }
+    },
+    "Continue" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Devam"
+          }
+        }
+      }
+    },
+    "Copy Address" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adresi Kopyala"
+          }
+        }
+      }
+    },
+    "Copy bundle ID" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bundle ID'yi kopyala"
+          }
+        }
+      }
+    },
+    "Could you send the October invoice again?" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ekim faturasını tekrar gönderebilir misin?"
+          }
+        }
+      }
+    },
+    "Couldn't change the login item setting: %@" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Başlangıç ayarı değiştirilemedi: %@"
+          }
+        }
+      }
+    },
+    "Couldn't connect to %@. Check your internet connection and try again." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ adresine bağlanılamadı. İnternet bağlantını kontrol edip tekrar dene."
+          }
+        }
+      }
+    },
+    "Couldn't download the message." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mail içeriği indirilemedi."
+          }
+        }
+      }
+    },
+    "Couldn't download the message: %@" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mail içeriği indirilemedi: %@"
+          }
+        }
+      }
+    },
+    "Couldn't save sign-in details to the Keychain" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giriş bilgileri Keychain'e kaydedilemedi"
+          }
+        }
+      }
+    },
+    "Couldn't send a change to the server, syncing again" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Değişiklik sunucuya iletilemedi, yeniden eşitleniyor"
+          }
+        }
+      }
+    },
+    "Couldn't send; saved to drafts: %@" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gönderilemedi, taslaklara kaydedildi: %@"
+          }
+        }
+      }
+    },
+    "Couldn't sync" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eşitlenemedi"
+          }
+        }
+      }
+    },
+    "Couldn't sync: %@" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eşitlenemedi: %@"
+          }
+        }
+      }
+    },
+    "Couldn't write to the local database" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yerel veritabanına yazılamadı"
+          }
+        }
+      }
+    },
+    "Create a new password named “Nook” on the **App passwords** page." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Uygulama şifreleri** sayfasında “Nook” adıyla yeni bir şifre oluştur."
+          }
+        }
+      }
+    },
+    "Create a new password under **Sign-In and Security** › **App-Specific Passwords**." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Giriş ve Güvenlik** › **Uygulamaya özel şifreler** bölümünden yeni bir şifre oluştur."
+          }
+        }
+      }
+    },
+    "Dark" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Koyu"
+          }
+        }
+      }
+    },
+    "Dark (invert colors)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Koyu (renkleri çevir)"
+          }
+        }
+      }
+    },
+    "Date" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tarih"
+          }
+        }
+      }
+    },
+    "Delete" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sil"
+          }
+        }
+      }
+    },
+    "Delete Draft" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taslağı Sil"
+          }
+        }
+      }
+    },
+    "Delete draft" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taslağı sil"
+          }
+        }
+      }
+    },
+    "Didn't receive a greeting from the server." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunucu karşılaması alınamadı."
+          }
+        }
+      }
+    },
+    "Display name" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Görünen ad"
+          }
+        }
+      }
+    },
+    "Document" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Belge"
+          }
+        }
+      }
+    },
+    "Done" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bitti"
+          }
+        }
+      }
+    },
+    "Downloading %lld%%" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İndiriliyor %%%lld"
+          }
+        }
+      }
+    },
+    "Downloading content…" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İçerik indiriliyor…"
+          }
+        }
+      }
+    },
+    "Draft" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taslak"
+          }
+        }
+      }
+    },
+    "Draft deleted" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taslak silindi"
+          }
+        }
+      }
+    },
+    "Draft saved" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taslak kaydedildi"
+          }
+        }
+      }
+    },
+    "Drafts" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taslaklar"
+          }
+        }
+      }
+    },
+    "Drop to attach" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eklemek için bırak"
+          }
+        }
+      }
+    },
+    "Enter a valid Gmail address, for example name@gmail.com." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geçerli bir Gmail adresi gir. Örnek: ad@gmail.com"
+          }
+        }
+      }
+    },
+    "Enter a valid iCloud address, for example name@icloud.com." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geçerli bir iCloud adresi gir. Örnek: ad@icloud.com"
+          }
+        }
+      }
+    },
+    "Every person who writes to you gets their own channel, right at the top." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sana yazan her kişinin en üstte kendi kanalı olur."
+          }
+        }
+      }
+    },
+    "Feed" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Akış"
+          }
+        }
+      }
+    },
+    "Fetching new mail" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeni mailler alınıyor"
+          }
+        }
+      }
+    },
+    "Fetching new mail for %lld accounts" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld hesapta yeni mailler alınıyor"
+          }
+        }
+      }
+    },
+    "File" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dosya"
+          }
+        }
+      }
+    },
+    "Finally, give this account a name and color. You can change them later." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Son olarak bu hesaba bir ad ve renk ver. Sonra değiştirebilirsin."
+          }
+        }
+      }
+    },
+    "Folder" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klasör"
+          }
+        }
+      }
+    },
+    "For messages with their own colors, like newsletters, notifications, and invoices. Plain-text messages always follow the theme." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kendi renkleri olan bülten, bildirim ve fatura gibi mailler için. Düz metin mailler her zaman temaya uyar."
+          }
+        }
+      }
+    },
+    "Forest" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Orman"
+          }
+        }
+      }
+    },
+    "Forward" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İlet"
+          }
+        }
+      }
+    },
+    "Forwarded message" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İletilen mesaj"
+          }
+        }
+      }
+    },
+    "From" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kimden"
+          }
+        }
+      }
+    },
+    "General" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Genel"
+          }
+        }
+      }
+    },
+    "Get started" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Başla"
+          }
+        }
+      }
+    },
+    "Gmail (IMAP, app password)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gmail (IMAP, uygulama şifresi)"
+          }
+        }
+      }
+    },
+    "Gmail address (e.g. name@gmail.com)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gmail adresi (ör. ad@gmail.com)"
+          }
+        }
+      }
+    },
+    "Go" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Git"
+          }
+        }
+      }
+    },
+    "Go to folder" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klasöre geç"
+          }
+        }
+      }
+    },
+    "Go to search" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aramaya git"
+          }
+        }
+      }
+    },
+    "Gray" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gri"
+          }
+        }
+      }
+    },
+    "Green" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeşil"
+          }
+        }
+      }
+    },
+    "Here are the ones I picked from the wedding. Mark the ones you like." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Düğünden seçtiklerim bunlar, beğendiklerini işaretle."
+          }
+        }
+      }
+    },
+    "Hide older conversations" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eski konuşmaları gizle"
+          }
+        }
+      }
+    },
+    "Hide older senders" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eski göndericileri gizle"
+          }
+        }
+      }
+    },
+    "How Nook works" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nook nasıl çalışır"
+          }
+        }
+      }
+    },
+    "How many new conversations each account has." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Her hesapta kaç yeni konuşma olduğu."
+          }
+        }
+      }
+    },
+    "I attached the final version. Could you take a look at the third slide?" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Son halini ekledim, üçüncü slayda bir bakar mısın?"
+          }
+        }
+      }
+    },
+    "Image" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Görsel"
+          }
+        }
+      }
+    },
+    "Inbox" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gelen Kutusu"
+          }
+        }
+      }
+    },
+    "Inbox is empty" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gelen kutusu boş"
+          }
+        }
+      }
+    },
+    "Indigo" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çivit"
+          }
+        }
+      }
+    },
+    "Ink" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mürekkep"
+          }
+        }
+      }
+    },
+    "Italic (⌘I)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İtalik (⌘I)"
+          }
+        }
+      }
+    },
+    "Keyboard Shortcuts  (?)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klavye Kısayolları  (?)"
+          }
+        }
+      }
+    },
+    "Keyboard shortcuts" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klavye kısayolları"
+          }
+        }
+      }
+    },
+    "Latest sender" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Son yazan"
+          }
+        }
+      }
+    },
+    "Lavender" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lavanta"
+          }
+        }
+      }
+    },
+    "Light" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Açık"
+          }
+        }
+      }
+    },
+    "Link" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Link"
+          }
+        }
+      }
+    },
+    "List" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liste"
+          }
+        }
+      }
+    },
+    "Local cache" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yerel önbellek"
+          }
+        }
+      }
+    },
+    "Mail" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mailler"
+          }
+        }
+      }
+    },
+    "Mail from people comes first. Everything else waits quietly." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İnsanlardan gelen mailler önce gelir. Geri kalan her şey sessizce bekler."
+          }
+        }
+      }
+    },
+    "Mail from people stays on top; newsletters, notifications, and invoices are grouped by sender." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İnsanlardan gelen mailler üstte durur; bülten, bildirim ve faturalar göndericiye göre gruplanır."
+          }
+        }
+      }
+    },
+    "Manually" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elle"
+          }
+        }
+      }
+    },
+    "Mark All as Read" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tümünü Okundu Olarak İşaretle"
+          }
+        }
+      }
+    },
+    "Mark all as read" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tümünü okundu say"
+          }
+        }
+      }
+    },
+    "Mark as Read" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Okundu Olarak İşaretle"
+          }
+        }
+      }
+    },
+    "Mark as Read  (U)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Okundu Olarak İşaretle  (U)"
+          }
+        }
+      }
+    },
+    "Mark as Spam" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spam"
+          }
+        }
+      }
+    },
+    "Mark as Unread" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Okunmadı Olarak İşaretle"
+          }
+        }
+      }
+    },
+    "Mark as Unread  (U)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Okunmadı Olarak İşaretle  (U)"
+          }
+        }
+      }
+    },
+    "Mark as read" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Okundu olarak işaretle"
+          }
+        }
+      }
+    },
+    "Mark as read (U)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Okundu (U)"
+          }
+        }
+      }
+    },
+    "Mark as unread (U)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Okunmadı (U)"
+          }
+        }
+      }
+    },
+    "Marked %lld messages as read" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld mail okundu olarak işaretlendi"
+          }
+        },
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Marked %lld message as read"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Marked %lld messages as read"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Marked as spam" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spam olarak işaretlendi"
+          }
+        }
+      }
+    },
+    "Me" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ben"
+          }
+        }
+      }
+    },
+    "Message" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mesaj"
+          }
+        }
+      }
+    },
+    "Message sent" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gönderildi"
+          }
+        }
+      }
+    },
+    "Message sent and can no longer be undone" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mail gönderildi, artık geri alınamaz"
+          }
+        }
+      }
+    },
+    "Messages in dark mode" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Koyu temada mailler"
+          }
+        }
+      }
+    },
+    "Messages in the trash are deleted automatically after 30 days" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çöpteki mailler 30 gün sonra kendiliğinden silinir"
+          }
+        }
+      }
+    },
+    "Midnight" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gece Yarısı"
+          }
+        }
+      }
+    },
+    "Mint" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nane"
+          }
+        }
+      }
+    },
+    "Mostly %@" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En çok %@"
+          }
+        }
+      }
+    },
+    "Move" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taşı"
+          }
+        }
+      }
+    },
+    "Move All to Trash" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tümünü Çöpe Taşı"
+          }
+        }
+      }
+    },
+    "Move to" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taşı"
+          }
+        }
+      }
+    },
+    "Move to Feed" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Akış'a Taşı"
+          }
+        }
+      }
+    },
+    "Move to Inbox" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gelen Kutusuna Taşı"
+          }
+        }
+      }
+    },
+    "Move to People" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İnsanlar'a Taşı"
+          }
+        }
+      }
+    },
+    "Move to Trash" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çöpe Taşı"
+          }
+        }
+      }
+    },
+    "Move to Trash  (⌫)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çöpe Taşı  (⌫)"
+          }
+        }
+      }
+    },
+    "Move to trash" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çöpe taşı"
+          }
+        }
+      }
+    },
+    "Move to trash (⌫)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çöpe taşı (⌫)"
+          }
+        }
+      }
+    },
+    "Moved" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taşındı"
+          }
+        }
+      }
+    },
+    "Moved to inbox" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gelen kutusuna taşındı"
+          }
+        }
+      }
+    },
+    "Moved to trash" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çöpe taşındı"
+          }
+        }
+      }
+    },
+    "Navigation" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gezinme"
+          }
+        }
+      }
+    },
+    "New Message" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeni Mail"
+          }
+        }
+      }
+    },
+    "New mail from people appears in your notch. Feed never interrupts you." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İnsanlardan gelen yeni mailler çentikte görünür. Akış seni hiç bölmez."
+          }
+        }
+      }
+    },
+    "New mail notifications" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeni mail bildirimi"
+          }
+        }
+      }
+    },
+    "New mail will appear here." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeni mailler burada görünecek."
+          }
+        }
+      }
+    },
+    "New message" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeni mail"
+          }
+        }
+      }
+    },
+    "New message (C or ⌘N)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeni mail (C veya ⌘N)"
+          }
+        }
+      }
+    },
+    "New message to %@" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ kişisine yeni mail"
+          }
+        }
+      }
+    },
+    "New messages will show up here." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeni bir şey gelince burada olacak."
+          }
+        }
+      }
+    },
+    "Newsletters, notifications, and invoices: how many are new and who sent the most." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bülten, bildirim ve faturalar: kaç yeni var, en çok kim yazdı."
+          }
+        }
+      }
+    },
+    "Newsletters, receipts and notifications are grouped by sender and wait in Feed." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bültenler, makbuzlar ve bildirimler göndericiye göre gruplanır ve Akış'ta bekler."
+          }
+        }
+      }
+    },
+    "Next Message  (J)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonraki Mail  (J)"
+          }
+        }
+      }
+    },
+    "Next message" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonraki mail"
+          }
+        }
+      }
+    },
+    "No drafts" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taslak yok"
+          }
+        }
+      }
+    },
+    "No mail found for “%@”" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“%@” için mail bulunamadı"
+          }
+        }
+      }
+    },
+    "No mail from people yet" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Henüz insanlardan mail yok"
+          }
+        }
+      }
+    },
+    "No new conversations in the last two weeks" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Son iki haftada yeni konuşma yok"
+          }
+        }
+      }
+    },
+    "No new mail from people" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İnsanlardan yeni mail yok"
+          }
+        }
+      }
+    },
+    "No newsletters or notifications" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bülten ve bildirim yok"
+          }
+        }
+      }
+    },
+    "No one\nyet" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Henüz\nkimse yok"
+          }
+        }
+      }
+    },
+    "No one has written yet" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Henüz kimse yazmadı"
+          }
+        }
+      }
+    },
+    "No servers in between. Mail goes straight from your provider to this Mac." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arada sunucu yok. Mailler doğrudan sağlayıcından bu Mac'e gelir."
+          }
+        }
+      }
+    },
+    "No spam" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spam yok"
+          }
+        }
+      }
+    },
+    "No starred mail" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yıldızlı mail yok"
+          }
+        }
+      }
+    },
+    "No unread conversations" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Okunmamış konuşma yok"
+          }
+        }
+      }
+    },
+    "No unread mail" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Okunmamış mail yok"
+          }
+        }
+      }
+    },
+    "Nook" : {
+      "shouldTranslate" : false,
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nook"
+          }
+        }
+      }
+    },
+    "Nook works with iCloud and Gmail. You'll create an app-specific password for Nook, and we'll walk you through it step by step." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nook, iCloud ve Gmail ile çalışır. Nook için uygulamaya özel bir şifre oluşturacaksın; adım adım birlikte ilerleyeceğiz."
+          }
+        }
+      }
+    },
+    "Notch" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çentik"
+          }
+        }
+      }
+    },
+    "Notifications" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bildirimler"
+          }
+        }
+      }
+    },
+    "OK" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tamam"
+          }
+        }
+      }
+    },
+    "Offline" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çevrimdışı"
+          }
+        }
+      }
+    },
+    "On %@, %@ wrote:" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ tarihinde %2$@ şunu yazdı:"
+          }
+        }
+      }
+    },
+    "On a light background" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Açık zeminde"
+          }
+        }
+      }
+    },
+    "On selection" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seçince"
+          }
+        }
+      }
+    },
+    "Onyx" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oniks"
+          }
+        }
+      }
+    },
+    "Open" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aç"
+          }
+        }
+      }
+    },
+    "Open\nNook" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nook'u\naç"
+          }
+        }
+      }
+    },
+    "Open Nook" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nook'u aç"
+          }
+        }
+      }
+    },
+    "Open System Settings" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sistem Ayarları'nı aç"
+          }
+        }
+      }
+    },
+    "Open account.apple.com" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "account.apple.com'u aç"
+          }
+        }
+      }
+    },
+    "Open account.apple.com." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "account.apple.com'u aç."
+          }
+        }
+      }
+    },
+    "Open at login" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oturum açınca başlat"
+          }
+        }
+      }
+    },
+    "Open conversation · %lld" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konuşmayı aç · %lld"
+          }
+        }
+      }
+    },
+    "Open in full composer" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tam yazma alanında aç"
+          }
+        }
+      }
+    },
+    "Open message" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maili aç"
+          }
+        }
+      }
+    },
+    "Open the App passwords page" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uygulama şifreleri sayfasını aç"
+          }
+        }
+      }
+    },
+    "Orange" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turuncu"
+          }
+        }
+      }
+    },
+    "Others" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diğerleri"
+          }
+        }
+      }
+    },
+    "Paper" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kağıt"
+          }
+        }
+      }
+    },
+    "Paste your Gmail address and the password below." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gmail adresini ve şifreyi aşağıya yapıştır."
+          }
+        }
+      }
+    },
+    "Paste your address and the password below." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adresini ve şifreyi aşağıya yapıştır."
+          }
+        }
+      }
+    },
+    "People" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İnsanlar"
+          }
+        }
+      }
+    },
+    "People and Feed" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İnsanlar ve Akış"
+          }
+        }
+      }
+    },
+    "Personal" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kişisel"
+          }
+        }
+      }
+    },
+    "Photos" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotoğraflar"
+          }
+        }
+      }
+    },
+    "Pick someone on the left, or use J and K to browse." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Soldan bir kişiyi seç ya da J ve K ile gezin."
+          }
+        }
+      }
+    },
+    "Pink" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pembe"
+          }
+        }
+      }
+    },
+    "Presentation" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunum"
+          }
+        }
+      }
+    },
+    "Presentation draft" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunum taslağı"
+          }
+        }
+      }
+    },
+    "Press S to star a message." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bir maili yıldızlamak için S tuşuna bas."
+          }
+        }
+      }
+    },
+    "Previous Message  (K)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Önceki Mail  (K)"
+          }
+        }
+      }
+    },
+    "Previous message" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Önceki mail"
+          }
+        }
+      }
+    },
+    "Private" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gizlilik"
+          }
+        }
+      }
+    },
+    "Purple" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mor"
+          }
+        }
+      }
+    },
+    "Quick Switcher…" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hızlı Geçiş…"
+          }
+        }
+      }
+    },
+    "Quick reply" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hızlı yanıt yaz"
+          }
+        }
+      }
+    },
+    "Quick switcher: account or folder" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hızlı geçiş: hesap veya klasör"
+          }
+        }
+      }
+    },
+    "Read / unread" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Okundu / okunmadı"
+          }
+        }
+      }
+    },
+    "Reading" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Okuma"
+          }
+        }
+      }
+    },
+    "Red" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kırmızı"
+          }
+        }
+      }
+    },
+    "Remote images weren't loaded to protect your privacy." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gizliliğin için uzak görseller yüklenmedi."
+          }
+        }
+      }
+    },
+    "Remove" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaldır"
+          }
+        }
+      }
+    },
+    "Remove Account" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabı Kaldır"
+          }
+        }
+      }
+    },
+    "Remove account" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabı kaldır"
+          }
+        }
+      }
+    },
+    "Remove attachment" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eki kaldır"
+          }
+        }
+      }
+    },
+    "Rename account" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabı yeniden adlandır"
+          }
+        }
+      }
+    },
+    "Rename…" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeniden Adlandır…"
+          }
+        }
+      }
+    },
+    "Reply" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yanıtla"
+          }
+        }
+      }
+    },
+    "Reply (R)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yanıtla (R)"
+          }
+        }
+      }
+    },
+    "Reply All" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tümünü Yanıtla"
+          }
+        }
+      }
+    },
+    "Reply all" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tümünü yanıtla"
+          }
+        }
+      }
+    },
+    "Reply to %@…" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ yanıt yaz…"
+          }
+        }
+      }
+    },
+    "Sand" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kum"
+          }
+        }
+      }
+    },
+    "Save" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaydet"
+          }
+        }
+      }
+    },
+    "Save all" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tümünü kaydet"
+          }
+        }
+      }
+    },
+    "Save here" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buraya kaydet"
+          }
+        }
+      }
+    },
+    "Save…" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaydet…"
+          }
+        }
+      }
+    },
+    "Search" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ara"
+          }
+        }
+      }
+    },
+    "Search (/ or ⌘F)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ara (/ veya ⌘F)"
+          }
+        }
+      }
+    },
+    "Search mail or go somewhere" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mail ara veya bir yere git"
+          }
+        }
+      }
+    },
+    "Search results" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arama"
+          }
+        }
+      }
+    },
+    "Select an account" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesap seç"
+          }
+        }
+      }
+    },
+    "Select an account on the left to see its details." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ayrıntıları görmek için soldan bir hesap seç."
+          }
+        }
+      }
+    },
+    "Send" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gönder"
+          }
+        }
+      }
+    },
+    "Send (⌘↩)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gönder (⌘↩)"
+          }
+        }
+      }
+    },
+    "Sender name" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gönderen adı"
+          }
+        }
+      }
+    },
+    "Sending" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gönderiliyor"
+          }
+        }
+      }
+    },
+    "Sending…" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gönderiliyor…"
+          }
+        }
+      }
+    },
+    "Sent" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gönderilen"
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ayarlar"
+          }
+        }
+      }
+    },
+    "Shortcuts" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kısayollar"
+          }
+        }
+      }
+    },
+    "Show All Mail" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tüm Mailleri Göster"
+          }
+        }
+      }
+    },
+    "Show All Mail  (⇧U)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tüm Mailleri Göster  (⇧U)"
+          }
+        }
+      }
+    },
+    "Show Unread Only" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yalnızca Okunmamışları Göster"
+          }
+        }
+      }
+    },
+    "Show all mail (⇧U)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tüm mailleri göster (⇧U)"
+          }
+        }
+      }
+    },
+    "Show all results for “%@” in the list" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“%@” için tüm sonuçları listede göster"
+          }
+        }
+      }
+    },
+    "Show images" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Görselleri göster"
+          }
+        }
+      }
+    },
+    "Show in the notch" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çentikte göster"
+          }
+        }
+      }
+    },
+    "Show less" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daha az göster"
+          }
+        }
+      }
+    },
+    "Show the Cc field" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bilgi (Cc) alanını göster"
+          }
+        }
+      }
+    },
+    "Show this list" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu listeyi göster"
+          }
+        }
+      }
+    },
+    "Show unread only (⇧U)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yalnızca okunmamışları göster (⇧U)"
+          }
+        }
+      }
+    },
+    "Shows a macOS notification when new mail arrives in your inbox." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gelen kutusuna yeni bir mail düştüğünde macOS bildirimi gösterir."
+          }
+        }
+      }
+    },
+    "Sign In Again…" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeniden Giriş Yap…"
+          }
+        }
+      }
+    },
+    "Sign in" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giriş yap"
+          }
+        }
+      }
+    },
+    "Sign in again" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeniden giriş yap"
+          }
+        }
+      }
+    },
+    "Sign-in details are missing. Please start over." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giriş bilgileri eksik, baştan dene."
+          }
+        }
+      }
+    },
+    "Sign-in rejected: %@" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giriş reddedildi: %@"
+          }
+        }
+      }
+    },
+    "Sign-in required" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeniden giriş gerekli"
+          }
+        }
+      }
+    },
+    "Signature" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İmza"
+          }
+        }
+      }
+    },
+    "Single-key shortcuts work outside the text field" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tek harfli kısayollar yazma alanı dışında çalışır"
+          }
+        }
+      }
+    },
+    "Spam" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spam"
+          }
+        }
+      }
+    },
+    "Spreadsheet" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tablo"
+          }
+        }
+      }
+    },
+    "Star" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yıldızla"
+          }
+        }
+      }
+    },
+    "Star  (S)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yıldızla  (S)"
+          }
+        }
+      }
+    },
+    "Star (S)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yıldızla (S)"
+          }
+        }
+      }
+    },
+    "Starred" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yıldızlı"
+          }
+        }
+      }
+    },
+    "Start typing to search mail: people, subjects, content, or attachment names." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mail aramak için yazmaya başla: kişi, konu, içerik veya ek adı."
+          }
+        }
+      }
+    },
+    "Startup" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Başlangıç"
+          }
+        }
+      }
+    },
+    "Status" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Durum"
+          }
+        }
+      }
+    },
+    "Studio" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stüdyo"
+          }
+        }
+      }
+    },
+    "Subject" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konu"
+          }
+        }
+      }
+    },
+    "Summary" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Özet"
+          }
+        }
+      }
+    },
+    "Sunset" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gün Batımı"
+          }
+        }
+      }
+    },
+    "Switch to account by position" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sıradaki hesaba geç"
+          }
+        }
+      }
+    },
+    "Sync Now" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şimdi Eşitle"
+          }
+        }
+      }
+    },
+    "Syncing" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eşitleniyor"
+          }
+        }
+      }
+    },
+    "Syncing…" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eşitleniyor…"
+          }
+        }
+      }
+    },
+    "System" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sistem"
+          }
+        }
+      }
+    },
+    "Teal" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Camgöbeği"
+          }
+        }
+      }
+    },
+    "Ten o'clock at our place, come along. Mom is baking pastries." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saat onda bizde, sen de gel. Annem börek yapıyor."
+          }
+        }
+      }
+    },
+    "Testing connection…" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bağlantı deneniyor…"
+          }
+        }
+      }
+    },
+    "The %@ folder wasn't found on the server." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunucuda %@ klasörü bulunamadı."
+          }
+        }
+      }
+    },
+    "The account to show in the widget." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget'ta gösterilecek hesap."
+          }
+        }
+      }
+    },
+    "The account's sign-in details weren't found in the Keychain." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabın giriş bilgileri Keychain'de bulunamadı."
+          }
+        }
+      }
+    },
+    "The app password for %@ is no longer valid. Create a new one on your Google Account's App passwords page and paste it here." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ için uygulama şifresi artık geçerli değil. Google hesabının Uygulama şifreleri sayfasında yeni bir şifre oluşturup yapıştır."
+          }
+        }
+      }
+    },
+    "The app-specific password for %@ is no longer valid. Create a new one at account.apple.com and paste it here." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ için uygulamaya özel şifre artık geçerli değil. account.apple.com'da yeni bir şifre oluşturup yapıştır."
+          }
+        }
+      }
+    },
+    "The book I mentioned is Madonna in a Fur Coat." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bahsettiğim kitabın adı Kürk Mantolu Madonna."
+          }
+        }
+      }
+    },
+    "The last person who wrote to you. Reply with one click." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sana en son yazan kişi; tek tıkla yanıtla."
+          }
+        }
+      }
+    },
+    "The latest people who wrote to you. Click a conversation to open it in Nook." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sana yazan son kişiler. Tıkladığın konuşma Nook'ta açılır."
+          }
+        }
+      }
+    },
+    "The message wasn't found on the server. It may have been moved or deleted." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mail sunucuda bulunamadı; taşınmış veya silinmiş olabilir."
+          }
+        }
+      }
+    },
+    "The outgoing mail server rejected the message: %@" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gönderim sunucusu reddetti: %@"
+          }
+        }
+      }
+    },
+    "The password wasn't accepted. Paste the app password you just created." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifre kabul edilmedi. Yeni oluşturduğun uygulama şifresini yapıştır."
+          }
+        }
+      }
+    },
+    "The password wasn't accepted. Use an app password, not your regular Google password. If the App passwords page won't open, turn on 2-Step Verification first. On work accounts, an administrator may have turned this feature off." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifre kabul edilmedi. Normal Google şifren değil, uygulama şifresi olmalı. Uygulama şifreleri sayfası açılmıyorsa önce 2 adımlı doğrulamayı aç. Şirket hesaplarında yönetici bu özelliği kapatmış olabilir."
+          }
+        }
+      }
+    },
+    "The password wasn't accepted. Use the app-specific password you created at account.apple.com, not your Apple Account password. This password can't be created if two-factor authentication is off." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifre kabul edilmedi. Apple ID şifren değil, account.apple.com'da oluşturduğun uygulamaya özel şifre olmalı. İki adımlı doğrulama kapalıysa bu şifre oluşturulamaz."
+          }
+        }
+      }
+    },
+    "The selected message, unread indicator, buttons, and links use this color." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seçili mail, okunmamış göstergesi, butonlar ve linkler bu rengi kullanır."
+          }
+        }
+      }
+    },
+    "The server closed the connection." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunucu bağlantıyı kapattı."
+          }
+        }
+      }
+    },
+    "The server didn't respond." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunucu yanıt vermedi."
+          }
+        }
+      }
+    },
+    "The server rejected the request: %@" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunucu isteği reddetti: %@"
+          }
+        }
+      }
+    },
+    "Theme" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tema"
+          }
+        }
+      }
+    },
+    "Theme color" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Temanın rengi"
+          }
+        }
+      }
+    },
+    "This account has already been added." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu hesap zaten ekli."
+          }
+        }
+      }
+    },
+    "This month" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu ay"
+          }
+        }
+      }
+    },
+    "This week" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu hafta"
+          }
+        }
+      }
+    },
+    "To" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kime"
+          }
+        }
+      }
+    },
+    "To: %@" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kime: %@"
+          }
+        }
+      }
+    },
+    "To: %@  ·  Cc: %@" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kime: %1$@  ·  Bilgi: %2$@"
+          }
+        }
+      }
+    },
+    "Today" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugün"
+          }
+        }
+      }
+    },
+    "Today %@" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugün %@"
+          }
+        }
+      }
+    },
+    "Trash" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çöp"
+          }
+        }
+      }
+    },
+    "Trash is empty" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çöp boş"
+          }
+        }
+      }
+    },
+    "Type" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tür"
+          }
+        }
+      }
+    },
+    "Underline (⌘U)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Altı çizili (⌘U)"
+          }
+        }
+      }
+    },
+    "Undo" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geri al"
+          }
+        }
+      }
+    },
+    "Undo last action" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Son işlemi geri al"
+          }
+        }
+      }
+    },
+    "Unfinished messages are saved here automatically." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yarım kalan mailler otomatik olarak buraya kaydedilir."
+          }
+        }
+      }
+    },
+    "Unified inbox" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Birleşik gelen kutusu"
+          }
+        }
+      }
+    },
+    "Unread Only  (⇧U)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yalnızca Okunmamışlar  (⇧U)"
+          }
+        }
+      }
+    },
+    "Unread conversations from people." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İnsanlardan gelen okunmamış konuşmalar."
+          }
+        }
+      }
+    },
+    "Unread only" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yalnızca okunmamışlar"
+          }
+        }
+      }
+    },
+    "Unstar" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yıldızı Kaldır"
+          }
+        }
+      }
+    },
+    "Unstar  (S)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yıldızı Kaldır  (S)"
+          }
+        }
+      }
+    },
+    "Unstar (S)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yıldızı kaldır (S)"
+          }
+        }
+      }
+    },
+    "Up to date as of %@" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ itibarıyla güncel"
+          }
+        }
+      }
+    },
+    "Updated %lld min ago" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld dk önce güncellendi"
+          }
+        }
+      }
+    },
+    "Updated just now" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Az önce güncellendi"
+          }
+        }
+      }
+    },
+    "Video" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Video"
+          }
+        }
+      }
+    },
+    "Waiting for connection" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bağlantı bekleniyor"
+          }
+        }
+      }
+    },
+    "Welcome to Nook" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nook'a hoş geldin"
+          }
+        }
+      }
+    },
+    "When new mail arrives, the notch opens for a few seconds to show who it's from. Hover over it to see recent conversations." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeni mail gelince çentik birkaç saniyeliğine açılıp kimden geldiğini gösterir; fareyle üzerine gelince son konuşmalar açılır."
+          }
+        }
+      }
+    },
+    "When off, tracking pixels can't run. You can show images in any message with one click." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kapalıyken takip pikselleri çalışmaz. Görselleri her mailde tek tıkla açabilirsin."
+          }
+        }
+      }
+    },
+    "When you close the window, Nook keeps running in the background and sending notifications. Quitting with ⌘Q stops notifications." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pencereyi kapatınca Nook arka planda çalışmaya ve bildirim göndermeye devam eder. ⌘Q ile çıkarsan bildirimler durur."
+          }
+        }
+      }
+    },
+    "Which account do you want to connect?" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hangi hesabı bağlamak istiyorsun?"
+          }
+        }
+      }
+    },
+    "Who wrote to you" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sana yazanlar"
+          }
+        }
+      }
+    },
+    "Who wrote to you and what's waiting in Feed, in one sentence." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kimin yazdığı ve Akış'ta ne beklediği, tek cümlede."
+          }
+        }
+      }
+    },
+    "Will send when you're back online" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bağlantı gelince gönderilecek"
+          }
+        }
+      }
+    },
+    "With an app password" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uygulama şifresi ile"
+          }
+        }
+      }
+    },
+    "With an app-specific password" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uygulamaya özel şifre ile"
+          }
+        }
+      }
+    },
+    "Write a reply…" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yanıt yaz…"
+          }
+        }
+      }
+    },
+    "Write your message…" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mesajını yaz…"
+          }
+        }
+      }
+    },
+    "Writing" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yazma"
+          }
+        }
+      }
+    },
+    "Yellow" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sarı"
+          }
+        }
+      }
+    },
+    "Yesterday" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dün"
+          }
+        }
+      }
+    },
+    "Yesterday %@" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dün %@"
+          }
+        }
+      }
+    },
+    "You need a 16-letter app password created for Nook, not your regular Google password." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Normal Google şifren değil, Nook için oluşturacağın 16 harfli bir uygulama şifresi gerekiyor."
+          }
+        }
+      }
+    },
+    "You're offline. Changes will sync when you're back online." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İnternet bağlantısı yok. Değişiklikler bağlantı gelince iletilecek."
+          }
+        }
+      }
+    },
+    "You've read everything." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hepsini okudun."
+          }
+        }
+      }
+    },
+    "Your accounts will appear here" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesapların burada görünecek"
+          }
+        }
+      }
+    },
+    "Your inbox is quiet" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gelen kutun sakin"
+          }
+        }
+      }
+    },
+    "Your inbox, sorted by who wrote to you." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gelen kutun, sana kimin yazdığına göre düzenlenir."
+          }
+        }
+      }
+    },
+    "Your mail and passwords stay on this Mac." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maillerin ve şifrelerin bu Mac'te kalır."
+          }
+        }
+      }
+    },
+    "Your session expired. Please sign in again." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oturumun süresi doldu, yeniden giriş gerekli."
+          }
+        }
+      }
+    },
+    "archive.action" : {
+      "comment" : "Arşivleme eylemi; klasör adı olan Archive'dan ayrı",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arşivle"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Archive"
+          }
+        }
+      }
+    },
+    "https://" : {
+      "shouldTranslate" : false,
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://"
+          }
+        }
+      }
+    },
+    "iCloud (IMAP, app-specific password)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud (IMAP, uygulamaya özel şifre)"
+          }
+        }
+      }
+    },
+    "iCloud Mail needs an app-specific password, not your Apple Account password." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud Mail için Apple ID şifren değil, uygulamaya özel bir şifre gerekiyor."
+          }
+        }
+      }
+    },
+    "iCloud address (e.g. name@icloud.com)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud adresi (ör. ad@icloud.com)"
+          }
+        }
+      }
+    },
+    "inbox.section" : {
+      "comment" : "Bölüm başlığı; klasör adı olan Inbox'tan ayrı",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gelen kutusu"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inbox"
+          }
+        }
+      }
+    },
+    "macOS notifications are turned off" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS bildirim izni kapalı"
+          }
+        }
+      }
+    },
+    "me" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ben"
+          }
+        }
+      }
+    },
+    "new" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "yeni"
+          }
+        }
+      }
+    },
+    "nothing new" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "yeni yok"
+          }
+        }
+      }
+    },
+    "off" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "kapalı"
+          }
+        }
+      }
+    },
+    "xxxx xxxx xxxx xxxx" : {
+      "shouldTranslate" : false,
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xxxx xxxx xxxx xxxx"
+          }
+        }
+      }
+    },
+    "xxxx-xxxx-xxxx-xxxx" : {
+      "shouldTranslate" : false,
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xxxx-xxxx-xxxx-xxxx"
+          }
+        }
+      }
+    },
+    "·" : {
+      "shouldTranslate" : false,
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "·"
+          }
+        }
+      }
+    },
+    "· mostly %@" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "· en çok %@"
+          }
+        }
+      }
+    },
+    "“%@” · %lld results" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“%1$@” · %2$lld sonuç"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“%1$@” · %#@results@"
+          },
+          "substitutions" : {
+            "results" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg result"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg results"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "📎 %@ and %lld more" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "📎 %1$@ ve %2$lld ek daha"
+          }
+        }
+      }
+    },
+    "📎 A message with attachments" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "📎 Ek içeren bir mail"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

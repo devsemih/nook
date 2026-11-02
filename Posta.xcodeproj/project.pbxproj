@@ -1,0 +1,945 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0418660FB123A3A64F726DAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7265261762C7F71ACEAE248C /* Assets.xcassets */; };
+		054FB33F773DE30F6726D606 /* ComposerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1857E07BFD612D40A1CF1801 /* ComposerView.swift */; };
+		068303DF657B7DBF95F7FE78 /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A03FB171FA93D3BF398DD6 /* ReaderView.swift */; };
+		08B3CF666A2B2473E3A7C72D /* RichTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35682EBB0843E1CFC4E8A805 /* RichTextEditor.swift */; };
+		0C057E1BE7FBB0A839CF0D52 /* SenderStackRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4555795B1750EA163E59D71A /* SenderStackRow.swift */; };
+		0CC9D7A83F3F75DC55302A28 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 82D8B7A870135FBD5BFCA33D /* Localizable.xcstrings */; };
+		0DAF37E8D6C25A7C61B6BB40 /* WidgetPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F02B812656AFC7540EE531 /* WidgetPublisher.swift */; };
+		1018B98A8C8273AA39092BBA /* MIMEParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062E52D66535D8F17EF04EE0 /* MIMEParser.swift */; };
+		1AC0AC4B486DB9B0798B56D8 /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB34BDE9940BFA2A11D6498 /* MessageListView.swift */; };
+		1C511A7F59918516D09C0B7A /* AccountViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE12BFD0ECC195792309F82 /* AccountViews.swift */; };
+		2001F440F765BD603AFCD1C4 /* FeedSegments.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA9ECA39D4D5597B782082 /* FeedSegments.swift */; };
+		25A270B91F397F00B6B82CAC /* IMAPValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC99525F9E35EBFCC3C5B62 /* IMAPValue.swift */; };
+		379C8948271E678B423F9896 /* Draft.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E119936F155BC629F8A29D /* Draft.swift */; };
+		3892B171B03E5B811DA92CBF /* ArchLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68DF297DF5925C7A9BCB3E5 /* ArchLine.swift */; };
+		398D8B37B7CAC37179BA7FE2 /* AttachmentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B724C4E870C1EC83AB8CF5 /* AttachmentCard.swift */; };
+		3A5FA6FE97ED173B600F42D2 /* ChannelSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AEA1044050F6B37BEE9C92 /* ChannelSidebar.swift */; };
+		3C1F20F77172EA8CFDB9DA47 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5A4FE023842174D4EF3D24 /* SyncEngine.swift */; };
+		3DAF22CA1521A66C652EBB3C /* StackFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD35D8DBDE32A76E95C346A2 /* StackFeedView.swift */; };
+		4133360AE5443F34E0D44217 /* StorageMaintenance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015A99AC299E40FADE3C1251 /* StorageMaintenance.swift */; };
+		46846F0DAC00BD798FFDBBE8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289445B15908DBBC99CB0835 /* ContentView.swift */; };
+		499457CF5ECD16097CB8BD5C /* Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B390245F23BCBBF6752B37E /* Formatting.swift */; };
+		4A794CB7C7870A874694C5F3 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBF9F2ACA84DD4B46929487 /* MessageView.swift */; };
+		4E9D4FC61C9C25DFD0C49BAB /* PostaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F08BED6C6DB04191E29907 /* PostaApp.swift */; };
+		52847580C549FEEB9E9A92EE /* AppearanceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62EC22FD862BE325B9CE1E5 /* AppearanceSettings.swift */; };
+		54DE115273D800063FAE3196 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7F1B1C14B3F2AE3149CF71 /* SettingsView.swift */; };
+		5A977D4CCFF961707BB58D2D /* SMTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8128E40A1D0DC077E8207A3 /* SMTPClient.swift */; };
+		5C8AB3940305129B8A03AACD /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0513A0707F73E6813E6AA4C0 /* WelcomeView.swift */; };
+		619C4311029181C10A25B96C /* StreamConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2D1A437F9793FD28E6B716 /* StreamConnection.swift */; };
+		61CA93C6E695FD40D0DD38F6 /* FeedSegments.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA9ECA39D4D5597B782082 /* FeedSegments.swift */; };
+		687322B0B0E7B2946A423413 /* IMAPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC8D20A57B92B5BAA6ECD1 /* IMAPClient.swift */; };
+		69028A9A154017EE61985668 /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF94678534227B48A53598C /* WidgetSnapshot.swift */; };
+		6A7FD1ECF30373DEC17273BE /* QuickReplyBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE216A71E8F2941964D41B8 /* QuickReplyBar.swift */; };
+		6E0F91FF07B2EC011C887C5C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30277057B8A3A148E69DC8BA /* Models.swift */; };
+		6F5A7AA1BA706F5AB78E212C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCDAE865DBFB485031F1647 /* DetailView.swift */; };
+		752D1B517C2F60AEF7049A7A /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DACF62A4CD966EEDA30E2 /* NotificationService.swift */; };
+		7D3F107F9CEAF2701C142861 /* Monogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64884E1FD60DECB76BBFED5 /* Monogram.swift */; };
+		8F453CB28BBB7BF9DEA3E8BD /* ShortcutsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1F5BC339F749E4898EB13E /* ShortcutsSheet.swift */; };
+		94934E303AD0DCDC5031A915 /* MailStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617CB27B7FADCFC934A159D /* MailStore.swift */; };
+		96C3647632251D2677A3FA0F /* ThreadRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BF3B7861B3546459C40F0 /* ThreadRow.swift */; };
+		9AB4C0625E893C16718C0B95 /* RecipientField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C0E4B4586015CA5B8737A /* RecipientField.swift */; };
+		9D50146FB7E20BACFD0B8529 /* AddAccountSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547661D13B9FDB320523DA9B /* AddAccountSheet.swift */; };
+		A14AF86BF57027D21617EA9D /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F2FB6D2A1D16836AA9DFB /* Log.swift */; };
+		A190715B45EDB46EC365ABAE /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CAEB527C01B6E8C05A7820 /* Views.swift */; };
+		A250CC9657DC5BA761048010 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 82D8B7A870135FBD5BFCA33D /* Localizable.xcstrings */; };
+		A2E3AC2FC80E4192DD43E466 /* MailBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7036074F5371901480C29CDD /* MailBodyView.swift */; };
+		A719C8B010D090AF67DF0DE2 /* MailIsland.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDC8CC31AA9FDAA17BCAE92 /* MailIsland.swift */; };
+		A8B2BD9FFE0006D7D0CEEF42 /* HTMLText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B73530CFFA8102CCD722825 /* HTMLText.swift */; };
+		B3DE7FFB0E8CF2538F0C7D6A /* NotificationText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8A8D8773A6E6BFFF1A7B5 /* NotificationText.swift */; };
+		B6486333486809D076D62A61 /* Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B390245F23BCBBF6752B37E /* Formatting.swift */; };
+		BB406FA08309416F4AE1038C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE89C46A21EFF06213B063FA /* AppDelegate.swift */; };
+		BF3670986CBCE62CA36FF8CA /* ArchLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68DF297DF5925C7A9BCB3E5 /* ArchLine.swift */; };
+		C1A65AF5D5977EA05C86861B /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74800362B3F6691802045AC2 /* Components.swift */; };
+		C2D90A14C267735B28330795 /* MIMEBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0024B7414E0BDEA9463B5254 /* MIMEBuilder.swift */; };
+		C521674F53916EB596001AE0 /* MailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F24A2C80B8CBFE4C91F567 /* MailProvider.swift */; };
+		C5CB816ED0964AA0BA0006E5 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAAC2933AB1482BD0D6AA1F /* Provider.swift */; };
+		CAA69A36E2826A98AE14CF26 /* Nook.icon in Resources */ = {isa = PBXBuildFile; fileRef = 866433335BAFF7202E9890DC /* Nook.icon */; };
+		CC625CE0F6E159474074E541 /* Inbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84433B092BD31B0474B2B38E /* Inbox.swift */; };
+		CC71AFB2EBB3A74CB1B743A0 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 417BECC1EF009E8B0FBA2843 /* GRDB */; };
+		DC5B89BE3E1EF7C4C8EBAE4F /* LocalDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D137530A95327C4468977D5 /* LocalDatabase.swift */; };
+		DE882182054629FAE7FE6F83 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2C39A787381B85403D54B8 /* Theme.swift */; };
+		E155D8DD85E3660B97BB6CF0 /* IMAPProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDFE3BAFF10F652F1A82BB2 /* IMAPProvider.swift */; };
+		E713B47DEB3D471FD09DC033 /* PostaCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AEB13147444F91DC411617 /* PostaCommands.swift */; };
+		E9A5870AF79B6B9B256BDC32 /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF94678534227B48A53598C /* WidgetSnapshot.swift */; };
+		EA249077C809CCECFA984815 /* PostaWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D4A2173D976C2CF2C544BC11 /* PostaWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EA64C1F8F6695FAC5E9D51A2 /* AccountRail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD08584C1F2D0739693E69B2 /* AccountRail.swift */; };
+		EBC3CD3F38227D2B04DE2465 /* MailClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B261EDC7013B2606A607E2D /* MailClassifier.swift */; };
+		EE4446FCA2391067C35A7FFE /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882C9E94275980CF91B05275 /* DemoData.swift */; };
+		F0A9554E36FC592EE643F0EF /* Monogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64884E1FD60DECB76BBFED5 /* Monogram.swift */; };
+		F63629ACBD35E973AB653AF3 /* PostaWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8881360505079C942082B82B /* PostaWidgets.swift */; };
+		FC14F420607F6758450C431F /* QuickSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809FD93569E01AEE2E7B07EA /* QuickSwitcher.swift */; };
+		FCBDA266B84BEEA1224ADA94 /* KeyboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0539CD7DE4E6ADDBBAF93A79 /* KeyboardRouter.swift */; };
+		FFB174125AFC8C438AEFA133 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0171D83CF35FC7CFCAE817 /* Keychain.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2A95FB544B1C8053CDBC8697 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAF71BAE96F352768C0FEE7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F245857D46ABC403EFDFCE7;
+			remoteInfo = PostaWidgets;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0E8BBDDDD6E5D55E797E2569 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EA249077C809CCECFA984815 /* PostaWidgets.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0024B7414E0BDEA9463B5254 /* MIMEBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIMEBuilder.swift; sourceTree = "<group>"; };
+		015A99AC299E40FADE3C1251 /* StorageMaintenance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageMaintenance.swift; sourceTree = "<group>"; };
+		0513A0707F73E6813E6AA4C0 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		0539CD7DE4E6ADDBBAF93A79 /* KeyboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardRouter.swift; sourceTree = "<group>"; };
+		062E52D66535D8F17EF04EE0 /* MIMEParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIMEParser.swift; sourceTree = "<group>"; };
+		0BBF9F2ACA84DD4B46929487 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		0C2D1A437F9793FD28E6B716 /* StreamConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamConnection.swift; sourceTree = "<group>"; };
+		1857E07BFD612D40A1CF1801 /* ComposerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerView.swift; sourceTree = "<group>"; };
+		1EE216A71E8F2941964D41B8 /* QuickReplyBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickReplyBar.swift; sourceTree = "<group>"; };
+		246DACF62A4CD966EEDA30E2 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		248C0E4B4586015CA5B8737A /* RecipientField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientField.swift; sourceTree = "<group>"; };
+		26CC8D20A57B92B5BAA6ECD1 /* IMAPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMAPClient.swift; sourceTree = "<group>"; };
+		289445B15908DBBC99CB0835 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		29AEA1044050F6B37BEE9C92 /* ChannelSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelSidebar.swift; sourceTree = "<group>"; };
+		2A2C39A787381B85403D54B8 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		2DCDAE865DBFB485031F1647 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		30277057B8A3A148E69DC8BA /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		337E36311AB841CE15B215F3 /* Posta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35682EBB0843E1CFC4E8A805 /* RichTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTextEditor.swift; sourceTree = "<group>"; };
+		35F413FDAA6886AE964E2576 /* PostaWidgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PostaWidgets.entitlements; sourceTree = "<group>"; };
+		44BB48B28A8B1DF690AA28F3 /* Posta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Posta.entitlements; sourceTree = "<group>"; };
+		4555795B1750EA163E59D71A /* SenderStackRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderStackRow.swift; sourceTree = "<group>"; };
+		4BDFE3BAFF10F652F1A82BB2 /* IMAPProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMAPProvider.swift; sourceTree = "<group>"; };
+		4CD8A8D8773A6E6BFFF1A7B5 /* NotificationText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationText.swift; sourceTree = "<group>"; };
+		4FE12BFD0ECC195792309F82 /* AccountViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViews.swift; sourceTree = "<group>"; };
+		4FFAA2438B334E8D89CA9115 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		547661D13B9FDB320523DA9B /* AddAccountSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountSheet.swift; sourceTree = "<group>"; };
+		5B261EDC7013B2606A607E2D /* MailClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailClassifier.swift; sourceTree = "<group>"; };
+		5B390245F23BCBBF6752B37E /* Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatting.swift; sourceTree = "<group>"; };
+		66F24A2C80B8CBFE4C91F567 /* MailProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailProvider.swift; sourceTree = "<group>"; };
+		6F1F5BC339F749E4898EB13E /* ShortcutsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsSheet.swift; sourceTree = "<group>"; };
+		7036074F5371901480C29CDD /* MailBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailBodyView.swift; sourceTree = "<group>"; };
+		718BF3B7861B3546459C40F0 /* ThreadRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadRow.swift; sourceTree = "<group>"; };
+		71F02B812656AFC7540EE531 /* WidgetPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetPublisher.swift; sourceTree = "<group>"; };
+		7265261762C7F71ACEAE248C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		74800362B3F6691802045AC2 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		809FD93569E01AEE2E7B07EA /* QuickSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSwitcher.swift; sourceTree = "<group>"; };
+		82D8B7A870135FBD5BFCA33D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		84433B092BD31B0474B2B38E /* Inbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inbox.swift; sourceTree = "<group>"; };
+		866433335BAFF7202E9890DC /* Nook.icon */ = {isa = PBXFileReference; lastKnownFileType = wrapper.icon; path = Nook.icon; sourceTree = "<group>"; };
+		882C9E94275980CF91B05275 /* DemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
+		8881360505079C942082B82B /* PostaWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostaWidgets.swift; sourceTree = "<group>"; };
+		985F2FB6D2A1D16836AA9DFB /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		9B73530CFFA8102CCD722825 /* HTMLText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLText.swift; sourceTree = "<group>"; };
+		9D137530A95327C4468977D5 /* LocalDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDatabase.swift; sourceTree = "<group>"; };
+		A1A03FB171FA93D3BF398DD6 /* ReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderView.swift; sourceTree = "<group>"; };
+		A8128E40A1D0DC077E8207A3 /* SMTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMTPClient.swift; sourceTree = "<group>"; };
+		AEB34BDE9940BFA2A11D6498 /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
+		B62EC22FD862BE325B9CE1E5 /* AppearanceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSettings.swift; sourceTree = "<group>"; };
+		B68DF297DF5925C7A9BCB3E5 /* ArchLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchLine.swift; sourceTree = "<group>"; };
+		BC647FEA334BFD464042A305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BD35D8DBDE32A76E95C346A2 /* StackFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackFeedView.swift; sourceTree = "<group>"; };
+		BE89C46A21EFF06213B063FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C64884E1FD60DECB76BBFED5 /* Monogram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monogram.swift; sourceTree = "<group>"; };
+		C6E119936F155BC629F8A29D /* Draft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draft.swift; sourceTree = "<group>"; };
+		CFDC8CC31AA9FDAA17BCAE92 /* MailIsland.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailIsland.swift; sourceTree = "<group>"; };
+		D0AEB13147444F91DC411617 /* PostaCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostaCommands.swift; sourceTree = "<group>"; };
+		D4A2173D976C2CF2C544BC11 /* PostaWidgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PostaWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D617CB27B7FADCFC934A159D /* MailStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailStore.swift; sourceTree = "<group>"; };
+		D6B724C4E870C1EC83AB8CF5 /* AttachmentCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentCard.swift; sourceTree = "<group>"; };
+		DCF94678534227B48A53598C /* WidgetSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSnapshot.swift; sourceTree = "<group>"; };
+		DD08584C1F2D0739693E69B2 /* AccountRail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRail.swift; sourceTree = "<group>"; };
+		DDAAC2933AB1482BD0D6AA1F /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		DE1B2B127E6043FA61BECD0D /* Nook.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Nook.xcconfig; sourceTree = "<group>"; };
+		DF7F1B1C14B3F2AE3149CF71 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E1CAEB527C01B6E8C05A7820 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
+		EE0171D83CF35FC7CFCAE817 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		EEFA9ECA39D4D5597B782082 /* FeedSegments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSegments.swift; sourceTree = "<group>"; };
+		F9F08BED6C6DB04191E29907 /* PostaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostaApp.swift; sourceTree = "<group>"; };
+		FB5A4FE023842174D4EF3D24 /* SyncEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncEngine.swift; sourceTree = "<group>"; };
+		FDC99525F9E35EBFCC3C5B62 /* IMAPValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMAPValue.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B915994450C31B396D7C6FDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC71AFB2EBB3A74CB1B743A0 /* GRDB in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0566D634A64D2B0723655707 /* Overlays */ = {
+			isa = PBXGroup;
+			children = (
+				809FD93569E01AEE2E7B07EA /* QuickSwitcher.swift */,
+				6F1F5BC339F749E4898EB13E /* ShortcutsSheet.swift */,
+			);
+			path = Overlays;
+			sourceTree = "<group>";
+		};
+		0A412E2B0714BC08418AAD51 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				547661D13B9FDB320523DA9B /* AddAccountSheet.swift */,
+				0513A0707F73E6813E6AA4C0 /* WelcomeView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		0C3CF10BD72B464334597070 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C6E119936F155BC629F8A29D /* Draft.swift */,
+				9B73530CFFA8102CCD722825 /* HTMLText.swift */,
+				5B261EDC7013B2606A607E2D /* MailClassifier.swift */,
+				66F24A2C80B8CBFE4C91F567 /* MailProvider.swift */,
+				30277057B8A3A148E69DC8BA /* Models.swift */,
+				B33A1B56F1217B2C2D2EF77B /* MIME */,
+				DF3BA91D67E01BCB6A4D918C /* Storage */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		122E70301B098405DCB8F3D1 /* PostaWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				84433B092BD31B0474B2B38E /* Inbox.swift */,
+				BC647FEA334BFD464042A305 /* Info.plist */,
+				35F413FDAA6886AE964E2576 /* PostaWidgets.entitlements */,
+				8881360505079C942082B82B /* PostaWidgets.swift */,
+				DDAAC2933AB1482BD0D6AA1F /* Provider.swift */,
+				E1CAEB527C01B6E8C05A7820 /* Views.swift */,
+			);
+			path = PostaWidgets;
+			sourceTree = "<group>";
+		};
+		1998771E0613776E16D135CA /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				1857E07BFD612D40A1CF1801 /* ComposerView.swift */,
+				248C0E4B4586015CA5B8737A /* RecipientField.swift */,
+				35682EBB0843E1CFC4E8A805 /* RichTextEditor.swift */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
+		1D627DAB0CEEAAA8DD5E6B67 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				7F2F2FDCD54F89ECB2813C6F /* IMAP */,
+				43F97275FD93C676AB900BFA /* Network */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		2C13A51AA8406E94BF9369B7 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				DD08584C1F2D0739693E69B2 /* AccountRail.swift */,
+				4FE12BFD0ECC195792309F82 /* AccountViews.swift */,
+				29AEA1044050F6B37BEE9C92 /* ChannelSidebar.swift */,
+			);
+			path = Sidebar;
+			sourceTree = "<group>";
+		};
+		37614A7C4809B25A88A6F109 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				AEB34BDE9940BFA2A11D6498 /* MessageListView.swift */,
+				4555795B1750EA163E59D71A /* SenderStackRow.swift */,
+				718BF3B7861B3546459C40F0 /* ThreadRow.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		43F97275FD93C676AB900BFA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0C2D1A437F9793FD28E6B716 /* StreamConnection.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		48385B592F7265AF03F14F7D /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				D617CB27B7FADCFC934A159D /* MailStore.swift */,
+				FB5A4FE023842174D4EF3D24 /* SyncEngine.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		4EB84A701519B63222824326 /* Reader */ = {
+			isa = PBXGroup;
+			children = (
+				D6B724C4E870C1EC83AB8CF5 /* AttachmentCard.swift */,
+				2DCDAE865DBFB485031F1647 /* DetailView.swift */,
+				7036074F5371901480C29CDD /* MailBodyView.swift */,
+				0BBF9F2ACA84DD4B46929487 /* MessageView.swift */,
+				1EE216A71E8F2941964D41B8 /* QuickReplyBar.swift */,
+				A1A03FB171FA93D3BF398DD6 /* ReaderView.swift */,
+				BD35D8DBDE32A76E95C346A2 /* StackFeedView.swift */,
+			);
+			path = Reader;
+			sourceTree = "<group>";
+		};
+		50DD097EC839C80C8FC06AB3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BE89C46A21EFF06213B063FA /* AppDelegate.swift */,
+				882C9E94275980CF91B05275 /* DemoData.swift */,
+				0539CD7DE4E6ADDBBAF93A79 /* KeyboardRouter.swift */,
+				985F2FB6D2A1D16836AA9DFB /* Log.swift */,
+				246DACF62A4CD966EEDA30E2 /* NotificationService.swift */,
+				4CD8A8D8773A6E6BFFF1A7B5 /* NotificationText.swift */,
+				F9F08BED6C6DB04191E29907 /* PostaApp.swift */,
+				D0AEB13147444F91DC411617 /* PostaCommands.swift */,
+				71F02B812656AFC7540EE531 /* WidgetPublisher.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6BB1A2B8D5D5321BDAB36358 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				DE1B2B127E6043FA61BECD0D /* Nook.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		793456AB7C2E3E1702AB7702 = {
+			isa = PBXGroup;
+			children = (
+				6BB1A2B8D5D5321BDAB36358 /* Config */,
+				D782595365097A714F5C2330 /* Posta */,
+				122E70301B098405DCB8F3D1 /* PostaWidgets */,
+				EF914A941A5433E1C4227819 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7EDEEBA6C342860773F403EA /* Island */ = {
+			isa = PBXGroup;
+			children = (
+				CFDC8CC31AA9FDAA17BCAE92 /* MailIsland.swift */,
+			);
+			path = Island;
+			sourceTree = "<group>";
+		};
+		7F2F2FDCD54F89ECB2813C6F /* IMAP */ = {
+			isa = PBXGroup;
+			children = (
+				26CC8D20A57B92B5BAA6ECD1 /* IMAPClient.swift */,
+				4BDFE3BAFF10F652F1A82BB2 /* IMAPProvider.swift */,
+				FDC99525F9E35EBFCC3C5B62 /* IMAPValue.swift */,
+				A8128E40A1D0DC077E8207A3 /* SMTPClient.swift */,
+			);
+			path = IMAP;
+			sourceTree = "<group>";
+		};
+		805ED0DCBB447522D5B50A2A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7265261762C7F71ACEAE248C /* Assets.xcassets */,
+				866433335BAFF7202E9890DC /* Nook.icon */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		974F45F38642E0FA56796797 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				2A2C39A787381B85403D54B8 /* Theme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		B33A1B56F1217B2C2D2EF77B /* MIME */ = {
+			isa = PBXGroup;
+			children = (
+				0024B7414E0BDEA9463B5254 /* MIMEBuilder.swift */,
+				062E52D66535D8F17EF04EE0 /* MIMEParser.swift */,
+			);
+			path = MIME;
+			sourceTree = "<group>";
+		};
+		BB0B845B1586D229549E6274 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				74800362B3F6691802045AC2 /* Components.swift */,
+				5B390245F23BCBBF6752B37E /* Formatting.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BCE2D882A891054E66598A6F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B68DF297DF5925C7A9BCB3E5 /* ArchLine.swift */,
+				EEFA9ECA39D4D5597B782082 /* FeedSegments.swift */,
+				82D8B7A870135FBD5BFCA33D /* Localizable.xcstrings */,
+				C64884E1FD60DECB76BBFED5 /* Monogram.swift */,
+				DCF94678534227B48A53598C /* WidgetSnapshot.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C71DCBA9A2BC6024AC6C3845 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B62EC22FD862BE325B9CE1E5 /* AppearanceSettings.swift */,
+				DF7F1B1C14B3F2AE3149CF71 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		D782595365097A714F5C2330 /* Posta */ = {
+			isa = PBXGroup;
+			children = (
+				4FFAA2438B334E8D89CA9115 /* Info.plist */,
+				44BB48B28A8B1DF690AA28F3 /* Posta.entitlements */,
+				50DD097EC839C80C8FC06AB3 /* App */,
+				0C3CF10BD72B464334597070 /* Core */,
+				1D627DAB0CEEAAA8DD5E6B67 /* Providers */,
+				805ED0DCBB447522D5B50A2A /* Resources */,
+				BCE2D882A891054E66598A6F /* Shared */,
+				48385B592F7265AF03F14F7D /* Stores */,
+				E76E5BA48B85CB85169CCB88 /* UI */,
+			);
+			path = Posta;
+			sourceTree = "<group>";
+		};
+		DF3BA91D67E01BCB6A4D918C /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				EE0171D83CF35FC7CFCAE817 /* Keychain.swift */,
+				9D137530A95327C4468977D5 /* LocalDatabase.swift */,
+				015A99AC299E40FADE3C1251 /* StorageMaintenance.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		E76E5BA48B85CB85169CCB88 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				289445B15908DBBC99CB0835 /* ContentView.swift */,
+				BB0B845B1586D229549E6274 /* Components */,
+				1998771E0613776E16D135CA /* Compose */,
+				7EDEEBA6C342860773F403EA /* Island */,
+				37614A7C4809B25A88A6F109 /* List */,
+				0A412E2B0714BC08418AAD51 /* Onboarding */,
+				0566D634A64D2B0723655707 /* Overlays */,
+				4EB84A701519B63222824326 /* Reader */,
+				C71DCBA9A2BC6024AC6C3845 /* Settings */,
+				2C13A51AA8406E94BF9369B7 /* Sidebar */,
+				974F45F38642E0FA56796797 /* Theme */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		EF914A941A5433E1C4227819 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				337E36311AB841CE15B215F3 /* Posta.app */,
+				D4A2173D976C2CF2C544BC11 /* PostaWidgets.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2AAE453AA4C67B9374ADE9D4 /* Posta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09A459965BAC64286026A541 /* Build configuration list for PBXNativeTarget "Posta" */;
+			buildPhases = (
+				C7411099ED23BBD5256498F6 /* Sources */,
+				F1E0F95C695741FFF64058F1 /* Resources */,
+				B915994450C31B396D7C6FDF /* Frameworks */,
+				0E8BBDDDD6E5D55E797E2569 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D82B4F29C79762DDF08308B /* PBXTargetDependency */,
+			);
+			name = Posta;
+			packageProductDependencies = (
+				417BECC1EF009E8B0FBA2843 /* GRDB */,
+			);
+			productName = Posta;
+			productReference = 337E36311AB841CE15B215F3 /* Posta.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7F245857D46ABC403EFDFCE7 /* PostaWidgets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC46FD3165A0C2DAFE7C1F80 /* Build configuration list for PBXNativeTarget "PostaWidgets" */;
+			buildPhases = (
+				73D66419075B697CE9123465 /* Sources */,
+				FB871EA02576E3FDC3630752 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PostaWidgets;
+			packageProductDependencies = (
+			);
+			productName = PostaWidgets;
+			productReference = D4A2173D976C2CF2C544BC11 /* PostaWidgets.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CAF71BAE96F352768C0FEE7C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					2AAE453AA4C67B9374ADE9D4 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					7F245857D46ABC403EFDFCE7 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 1DB44697353CD6786C536FFF /* Build configuration list for PBXProject "Posta" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+				tr,
+			);
+			mainGroup = 793456AB7C2E3E1702AB7702;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A862A72CC02835D60AF84E6A /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = EF914A941A5433E1C4227819 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2AAE453AA4C67B9374ADE9D4 /* Posta */,
+				7F245857D46ABC403EFDFCE7 /* PostaWidgets */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F1E0F95C695741FFF64058F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0418660FB123A3A64F726DAD /* Assets.xcassets in Resources */,
+				0CC9D7A83F3F75DC55302A28 /* Localizable.xcstrings in Resources */,
+				CAA69A36E2826A98AE14CF26 /* Nook.icon in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB871EA02576E3FDC3630752 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A250CC9657DC5BA761048010 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		73D66419075B697CE9123465 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3892B171B03E5B811DA92CBF /* ArchLine.swift in Sources */,
+				61CA93C6E695FD40D0DD38F6 /* FeedSegments.swift in Sources */,
+				B6486333486809D076D62A61 /* Formatting.swift in Sources */,
+				CC625CE0F6E159474074E541 /* Inbox.swift in Sources */,
+				F0A9554E36FC592EE643F0EF /* Monogram.swift in Sources */,
+				F63629ACBD35E973AB653AF3 /* PostaWidgets.swift in Sources */,
+				C5CB816ED0964AA0BA0006E5 /* Provider.swift in Sources */,
+				A190715B45EDB46EC365ABAE /* Views.swift in Sources */,
+				E9A5870AF79B6B9B256BDC32 /* WidgetSnapshot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7411099ED23BBD5256498F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA64C1F8F6695FAC5E9D51A2 /* AccountRail.swift in Sources */,
+				1C511A7F59918516D09C0B7A /* AccountViews.swift in Sources */,
+				9D50146FB7E20BACFD0B8529 /* AddAccountSheet.swift in Sources */,
+				BB406FA08309416F4AE1038C /* AppDelegate.swift in Sources */,
+				52847580C549FEEB9E9A92EE /* AppearanceSettings.swift in Sources */,
+				BF3670986CBCE62CA36FF8CA /* ArchLine.swift in Sources */,
+				398D8B37B7CAC37179BA7FE2 /* AttachmentCard.swift in Sources */,
+				3A5FA6FE97ED173B600F42D2 /* ChannelSidebar.swift in Sources */,
+				C1A65AF5D5977EA05C86861B /* Components.swift in Sources */,
+				054FB33F773DE30F6726D606 /* ComposerView.swift in Sources */,
+				46846F0DAC00BD798FFDBBE8 /* ContentView.swift in Sources */,
+				EE4446FCA2391067C35A7FFE /* DemoData.swift in Sources */,
+				6F5A7AA1BA706F5AB78E212C /* DetailView.swift in Sources */,
+				379C8948271E678B423F9896 /* Draft.swift in Sources */,
+				2001F440F765BD603AFCD1C4 /* FeedSegments.swift in Sources */,
+				499457CF5ECD16097CB8BD5C /* Formatting.swift in Sources */,
+				A8B2BD9FFE0006D7D0CEEF42 /* HTMLText.swift in Sources */,
+				687322B0B0E7B2946A423413 /* IMAPClient.swift in Sources */,
+				E155D8DD85E3660B97BB6CF0 /* IMAPProvider.swift in Sources */,
+				25A270B91F397F00B6B82CAC /* IMAPValue.swift in Sources */,
+				FCBDA266B84BEEA1224ADA94 /* KeyboardRouter.swift in Sources */,
+				FFB174125AFC8C438AEFA133 /* Keychain.swift in Sources */,
+				DC5B89BE3E1EF7C4C8EBAE4F /* LocalDatabase.swift in Sources */,
+				A14AF86BF57027D21617EA9D /* Log.swift in Sources */,
+				C2D90A14C267735B28330795 /* MIMEBuilder.swift in Sources */,
+				1018B98A8C8273AA39092BBA /* MIMEParser.swift in Sources */,
+				A2E3AC2FC80E4192DD43E466 /* MailBodyView.swift in Sources */,
+				EBC3CD3F38227D2B04DE2465 /* MailClassifier.swift in Sources */,
+				A719C8B010D090AF67DF0DE2 /* MailIsland.swift in Sources */,
+				C521674F53916EB596001AE0 /* MailProvider.swift in Sources */,
+				94934E303AD0DCDC5031A915 /* MailStore.swift in Sources */,
+				1AC0AC4B486DB9B0798B56D8 /* MessageListView.swift in Sources */,
+				4A794CB7C7870A874694C5F3 /* MessageView.swift in Sources */,
+				6E0F91FF07B2EC011C887C5C /* Models.swift in Sources */,
+				7D3F107F9CEAF2701C142861 /* Monogram.swift in Sources */,
+				752D1B517C2F60AEF7049A7A /* NotificationService.swift in Sources */,
+				B3DE7FFB0E8CF2538F0C7D6A /* NotificationText.swift in Sources */,
+				4E9D4FC61C9C25DFD0C49BAB /* PostaApp.swift in Sources */,
+				E713B47DEB3D471FD09DC033 /* PostaCommands.swift in Sources */,
+				6A7FD1ECF30373DEC17273BE /* QuickReplyBar.swift in Sources */,
+				FC14F420607F6758450C431F /* QuickSwitcher.swift in Sources */,
+				068303DF657B7DBF95F7FE78 /* ReaderView.swift in Sources */,
+				9AB4C0625E893C16718C0B95 /* RecipientField.swift in Sources */,
+				08B3CF666A2B2473E3A7C72D /* RichTextEditor.swift in Sources */,
+				5A977D4CCFF961707BB58D2D /* SMTPClient.swift in Sources */,
+				0C057E1BE7FBB0A839CF0D52 /* SenderStackRow.swift in Sources */,
+				54DE115273D800063FAE3196 /* SettingsView.swift in Sources */,
+				8F453CB28BBB7BF9DEA3E8BD /* ShortcutsSheet.swift in Sources */,
+				3DAF22CA1521A66C652EBB3C /* StackFeedView.swift in Sources */,
+				4133360AE5443F34E0D44217 /* StorageMaintenance.swift in Sources */,
+				619C4311029181C10A25B96C /* StreamConnection.swift in Sources */,
+				3C1F20F77172EA8CFDB9DA47 /* SyncEngine.swift in Sources */,
+				DE882182054629FAE7FE6F83 /* Theme.swift in Sources */,
+				96C3647632251D2677A3FA0F /* ThreadRow.swift in Sources */,
+				5C8AB3940305129B8A03AACD /* WelcomeView.swift in Sources */,
+				0DAF37E8D6C25A7C61B6BB40 /* WidgetPublisher.swift in Sources */,
+				69028A9A154017EE61985668 /* WidgetSnapshot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D82B4F29C79762DDF08308B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F245857D46ABC403EFDFCE7 /* PostaWidgets */;
+			targetProxy = 2A95FB544B1C8053CDBC8697 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		17B45732DCDC87970C210032 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		1A8EDEDAF7464347C7FFDDFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE1B2B127E6043FA61BECD0D /* Nook.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PostaWidgets/PostaWidgets.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PostaWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Nook;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Odin Studio";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.odinstudio.posta.widgets;
+				PRODUCT_NAME = PostaWidgets;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+			};
+			name = Debug;
+		};
+		5B2C39867F0511AFAFBDDDDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE1B2B127E6043FA61BECD0D /* Nook.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = Nook;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Posta/Posta.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Posta/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Nook;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Odin Studio";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.odinstudio.posta;
+				PRODUCT_MODULE_NAME = Posta;
+				PRODUCT_NAME = Nook;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		84B5DC290C26A46102E4CC43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE1B2B127E6043FA61BECD0D /* Nook.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = Nook;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Posta/Posta.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Posta/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Nook;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Odin Studio";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.odinstudio.posta;
+				PRODUCT_MODULE_NAME = Posta;
+				PRODUCT_NAME = Nook;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B2E54FB268FA9EDD0C94FBB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE1B2B127E6043FA61BECD0D /* Nook.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PostaWidgets/PostaWidgets.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PostaWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Nook;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Odin Studio";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.odinstudio.posta.widgets;
+				PRODUCT_NAME = PostaWidgets;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+			};
+			name = Release;
+		};
+		E6C59853B8125D12F9BD77B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09A459965BAC64286026A541 /* Build configuration list for PBXNativeTarget "Posta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84B5DC290C26A46102E4CC43 /* Debug */,
+				5B2C39867F0511AFAFBDDDDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1DB44697353CD6786C536FFF /* Build configuration list for PBXProject "Posta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6C59853B8125D12F9BD77B9 /* Debug */,
+				17B45732DCDC87970C210032 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FC46FD3165A0C2DAFE7C1F80 /* Build configuration list for PBXNativeTarget "PostaWidgets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A8EDEDAF7464347C7FFDDFA /* Debug */,
+				B2E54FB268FA9EDD0C94FBB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A862A72CC02835D60AF84E6A /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		417BECC1EF009E8B0FBA2843 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A862A72CC02835D60AF84E6A /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CAF71BAE96F352768C0FEE7C /* Project object */;
+}

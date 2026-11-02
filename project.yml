@@ -1,0 +1,82 @@
+name: Posta
+options:
+  bundleIdPrefix: com.odinstudio
+  developmentLanguage: en
+  deploymentTarget:
+    macOS: "26.0"
+  createIntermediateGroups: true
+packages:
+  GRDB:
+    url: https://github.com/groue/GRDB.swift
+    from: 7.0.0
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MACOSX_DEPLOYMENT_TARGET: "26.0"
+    SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
+    SWIFT_APPROACHABLE_CONCURRENCY: YES
+    SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY: YES
+targets:
+  Posta:
+    type: application
+    platform: macOS
+    sources:
+      - path: Posta
+        excludes:
+          - "Resources/Nook.icon"
+      # Icon Composer'ın katmanlı simgesi; açık, koyu ve renkli temalara macOS kendisi uyarlar
+      - path: Posta/Resources/Nook.icon
+        type: file
+        buildPhase: resources
+    dependencies:
+      - package: GRDB
+      - target: PostaWidgets
+    configFiles:
+      Debug: Config/Nook.xcconfig
+      Release: Config/Nook.xcconfig
+    settings:
+      base:
+        # Uygulamanın adı Nook; kimlik, veriler ve Swift modülü eski adla kalır
+        PRODUCT_NAME: Nook
+        PRODUCT_MODULE_NAME: Posta
+        PRODUCT_BUNDLE_IDENTIFIER: com.odinstudio.posta
+        MARKETING_VERSION: "0.1.0"
+        CURRENT_PROJECT_VERSION: "5"
+        GENERATE_INFOPLIST_FILE: YES
+        # Widget bağlantıları için posta:// adresi
+        INFOPLIST_FILE: Posta/Info.plist
+        INFOPLIST_KEY_CFBundleDisplayName: Nook
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.productivity
+        INFOPLIST_KEY_NSHumanReadableCopyright: "© 2026 Odin Studio"
+        CODE_SIGN_ENTITLEMENTS: Posta/Posta.entitlements
+        ENABLE_HARDENED_RUNTIME: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: Nook
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+
+  # Masaüstü widget'ları. Uygulamanın uygulama grubuna yazdığı özeti okur, ağa çıkmaz.
+  PostaWidgets:
+    type: app-extension
+    platform: macOS
+    configFiles:
+      Debug: Config/Nook.xcconfig
+      Release: Config/Nook.xcconfig
+    sources:
+      - path: PostaWidgets
+      - path: Posta/Shared
+      - path: Posta/UI/Components/Formatting.swift
+    settings:
+      base:
+        PRODUCT_NAME: PostaWidgets
+        PRODUCT_BUNDLE_IDENTIFIER: com.odinstudio.posta.widgets
+        MARKETING_VERSION: "0.1.0"
+        CURRENT_PROJECT_VERSION: "5"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_FILE: PostaWidgets/Info.plist
+        INFOPLIST_KEY_CFBundleDisplayName: Nook
+        INFOPLIST_KEY_NSHumanReadableCopyright: "© 2026 Odin Studio"
+        CODE_SIGN_ENTITLEMENTS: PostaWidgets/PostaWidgets.entitlements
+        ENABLE_HARDENED_RUNTIME: YES
+        SKIP_INSTALL: YES
+        # WidgetKit sağlayıcıları arka planda çağrılır; ana aktöre bağlı olmamalı
+        SWIFT_DEFAULT_ACTOR_ISOLATION: nonisolated
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks"
