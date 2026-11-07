@@ -132,6 +132,10 @@ enum DemoData {
             runVideoCaptures(store: store, themes: themes, folder: folder)
             return
         }
+        if UserDefaults.standard.string(forKey: "NookCaptureSet") == "island" {
+            runIslandCaptures(store: store, folder: folder)
+            return
+        }
         try? FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
         Task { @MainActor in
             try? await Task.sleep(for: .seconds(2))
@@ -164,6 +168,27 @@ enum DemoData {
             MailIsland.shared.hover(false)
             try? await Task.sleep(for: .seconds(0.8))
             themes.themeID = originalTheme
+            NSApp.terminate(nil)
+        }
+    }
+
+    /// Çentik: `-islandOptions` ile seçilen liste açık halde ve ilk satıra tıklanınca açılan pencere
+    private static func runIslandCaptures(store: MailStore, folder: URL) {
+        try? FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
+        Task { @MainActor in
+            try? await Task.sleep(for: .seconds(2))
+            guard let window = store.mainWindow else { return }
+            let island = MailIsland.shared
+            island.click()
+            try? await Task.sleep(for: .seconds(1.2))
+            if let panel = island.panelWindow {
+                capture(panel, to: folder.appendingPathComponent("island-open.png"), scale: 2)
+            }
+            let options = island.options
+            let first = store.islandItems(options.content(splitInbox: store.splitInbox), limit: options.rows).first
+            first.map { island.open($0.link) }
+            try? await Task.sleep(for: .seconds(1.5))
+            capture(window, to: folder.appendingPathComponent("island-target.png"), scale: 2)
             NSApp.terminate(nil)
         }
     }

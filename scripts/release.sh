@@ -12,7 +12,7 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 PROFILE="${NOTARY_PROFILE:-nook-notary}"
-OUT="build/release"
+OUT="${RELEASE_OUT:-build/release}"
 VERSION=$(grep -m1 'MARKETING_VERSION' project.yml | sed -E 's/.*"(.*)".*/\1/')
 TEAM=$(grep -E '^DEVELOPMENT_TEAM' Config/Signing.xcconfig | sed -E 's/.*= *//')
 DMG="$OUT/Nook-$VERSION.dmg"

@@ -74,12 +74,14 @@ nonisolated struct WidgetSnapshot: Codable, Equatable, Sendable {
     }
 }
 
-/// Widget'tan Posta'ya açılan bağlantılar: posta://thread/<id>, posta://inbox?account=<id>, posta://compose
+/// Widget'tan Posta'ya açılan bağlantılar: posta://thread/<id>, posta://inbox?account=<id>, posta://stack?key=<gönderici>, posta://compose
 nonisolated enum PostaLink: Equatable {
     case inbox(account: UUID?)
     case thread(UUID)
     /// Konuşmayı açıp hızlı yanıta odaklanır
     case reply(UUID)
+    /// Akış'ta bir göndericinin yığını
+    case stack(String)
     case compose(account: UUID?)
 
     static let scheme = "posta"
@@ -97,6 +99,9 @@ nonisolated enum PostaLink: Equatable {
         case .reply(let id):
             components.host = "reply"
             components.path = "/\(id.uuidString)"
+        case .stack(let key):
+            components.host = "stack"
+            components.queryItems = [URLQueryItem(name: "key", value: key)]
         case .compose(let account):
             components.host = "compose"
             components.queryItems = account.map { [URLQueryItem(name: "account", value: $0.uuidString)] }
@@ -116,6 +121,9 @@ nonisolated enum PostaLink: Equatable {
         case "reply":
             guard let id = UUID(uuidString: url.lastPathComponent) else { return nil }
             self = .reply(id)
+        case "stack":
+            guard let key = components.queryItems?.first(where: { $0.name == "key" })?.value else { return nil }
+            self = .stack(key)
         case "compose":
             self = .compose(account: account)
         default:

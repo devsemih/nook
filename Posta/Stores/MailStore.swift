@@ -889,6 +889,13 @@ final class MailStore {
         selectedThreadID = threadID
     }
 
+    /// Adadan: Akış'taki bir göndericinin mailleri
+    func revealStack(_ key: String) {
+        go(scope: .all, folder: .inbox)
+        unreadOnly = false
+        selectedStackID = key
+    }
+
     private func scopeChanged() {
         guard !isRestoring else { return }
         selectedThreadID = nil

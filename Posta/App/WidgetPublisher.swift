@@ -150,6 +150,56 @@ extension MailStore {
         )
     }
 
+    /// Ada açılınca listelenen satırlar, tüm hesapların gelen kutusundan
+    func islandItems(_ content: IslandOptions.Content, limit: Int) -> [IslandItem] {
+        let inbox = threads(in: .all, folder: .inbox)
+        switch content {
+        case .people:
+            let people = splitInbox ? inbox.filter { feedSender(of: $0) == nil } : inbox
+            return people
+                .sorted { ($0.isUnread ? 1 : 0, $0.lastDate) > ($1.isUnread ? 1 : 0, $1.lastDate) }
+                .prefix(limit)
+                .map(islandItem)
+        case .latest:
+            return inbox
+                .sorted { $0.lastDate > $1.lastDate }
+                .prefix(limit)
+                .map(islandItem)
+        case .feed:
+            var stacks: [String: (sender: Contact, threads: [MailThread])] = [:]
+            for thread in inbox {
+                guard let sender = feedSender(of: thread) else { continue }
+                stacks[MailClassifier.senderKey(for: sender), default: (sender, [])].threads.append(thread)
+            }
+            let items = stacks.compactMap { key, stack -> IslandItem? in
+                guard let newest = stack.threads.max(by: { $0.lastDate < $1.lastDate }) else { return nil }
+                let unread = stack.threads.filter(\.isUnread).count
+                return IslandItem(
+                    id: key,
+                    sender: stack.sender.displayName,
+                    subject: newest.displaySubject,
+                    date: newest.lastDate,
+                    isUnread: unread > 0,
+                    count: unread,
+                    link: .stack(key)
+                )
+            }
+            return Array(items.sorted { $0.date > $1.date }.prefix(limit))
+        }
+    }
+
+    private func islandItem(_ thread: MailThread) -> IslandItem {
+        let sender = feedSender(of: thread) ?? incomingSender(of: thread) ?? thread.messages.last { !$0.isDraft }?.from
+        return IslandItem(
+            id: thread.id.uuidString,
+            sender: sender?.displayName ?? "",
+            subject: thread.displaySubject,
+            date: thread.lastDate,
+            isUnread: thread.isUnread,
+            link: .thread(thread.id)
+        )
+    }
+
     /// Widget'tan gelen bağlantı: konuşmayı, hesabın gelen kutusunu ya da yeni maili açar
     func open(_ link: PostaLink) {
         switch link {
@@ -158,6 +208,8 @@ extension MailStore {
         case .reply(let id):
             reveal(id)
             startReply()
+        case .stack(let key):
+            revealStack(key)
         case .inbox(let account):
             go(scope: account.flatMap { self.account($0) }.map { .account($0.id) } ?? .all, folder: .inbox)
         case .compose(let account):

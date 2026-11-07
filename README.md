@@ -54,7 +54,7 @@ Every sender in the Feed is a single row, no matter how many messages they send.
 
 ### Your notch, alive
 
-On Macs with a notch, Nook lives right inside it. At rest it shows how many people are waiting for you. When someone writes, it opens for a moment to show who it is. Hover to see your latest conversations and jump straight in.
+On Macs with a notch, Nook lives right inside it. At rest it shows how many people are waiting for you. When someone writes, it opens for a moment to show who it is. Hover to see your people, your Feed or your latest mail, then click a row to jump straight to it.
 
 Sign-in codes show up there too, with a Copy button, so you never have to open the email. And it's yours to shape: choose what it shows at rest, whether new mail opens it, how long it stays, and whether it opens on hover or on click.
 

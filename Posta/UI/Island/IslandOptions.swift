@@ -21,6 +21,12 @@ nonisolated struct IslandOptions: Equatable, Sendable {
         var id: Self { self }
     }
 
+    /// Ada açılınca ne listelenir
+    enum Content: String, CaseIterable, Identifiable, Codable, Sendable {
+        case people, feed, latest
+        var id: Self { self }
+    }
+
     var leading = Leading.mark
     var badge = Badge.people
     /// Okunmamış yoksa ada çentiğin içine çekilir
@@ -34,6 +40,7 @@ nonisolated struct IslandOptions: Equatable, Sendable {
     var showsCodes = true
 
     var trigger = Trigger.hover
+    var content = Content.people
     var rows = 4
     var showsFeed = true
     var showsActions = true
@@ -44,11 +51,21 @@ nonisolated struct IslandOptions: Equatable, Sendable {
     static var current: IslandOptions {
         UserDefaults.standard.string(forKey: SettingsKey.islandOptions).flatMap(IslandOptions.init(rawValue:)) ?? IslandOptions()
     }
+
+    /// İnsanlar ve Akış ayrımı kapalıysa Akış diye bir liste yok
+    func content(splitInbox: Bool) -> Content {
+        content == .feed && !splitInbox ? .people : content
+    }
+
+    /// Akış satırı yalnızca kişi listesinin altında durur
+    func showsFeedLine(splitInbox: Bool) -> Bool {
+        showsFeed && splitInbox && content == .people
+    }
 }
 
 nonisolated extension IslandOptions: Codable {
     private enum CodingKeys: String, CodingKey {
-        case leading, badge, hidesWhenRead, announces, showsSubject, peekSeconds, showsCodes, trigger, rows, showsFeed, showsActions
+        case leading, badge, hidesWhenRead, announces, showsSubject, peekSeconds, showsCodes, trigger, content, rows, showsFeed, showsActions
     }
 
     init(from decoder: Decoder) throws {
@@ -62,6 +79,7 @@ nonisolated extension IslandOptions: Codable {
         peekSeconds = (try? c.decodeIfPresent(Int.self, forKey: .peekSeconds)) ?? base.peekSeconds
         showsCodes = (try? c.decodeIfPresent(Bool.self, forKey: .showsCodes)) ?? base.showsCodes
         trigger = (try? c.decodeIfPresent(Trigger.self, forKey: .trigger)) ?? base.trigger
+        content = (try? c.decodeIfPresent(Content.self, forKey: .content)) ?? base.content
         rows = (try? c.decodeIfPresent(Int.self, forKey: .rows)) ?? base.rows
         showsFeed = (try? c.decodeIfPresent(Bool.self, forKey: .showsFeed)) ?? base.showsFeed
         showsActions = (try? c.decodeIfPresent(Bool.self, forKey: .showsActions)) ?? base.showsActions
@@ -77,6 +95,7 @@ nonisolated extension IslandOptions: Codable {
         try c.encode(peekSeconds, forKey: .peekSeconds)
         try c.encode(showsCodes, forKey: .showsCodes)
         try c.encode(trigger, forKey: .trigger)
+        try c.encode(content, forKey: .content)
         try c.encode(rows, forKey: .rows)
         try c.encode(showsFeed, forKey: .showsFeed)
         try c.encode(showsActions, forKey: .showsActions)
@@ -113,6 +132,16 @@ extension IslandOptions.Badge {
         case .people: String(localized: "People")
         case .everything: String(localized: "People and Feed")
         case .hidden: String(localized: "Nothing")
+        }
+    }
+}
+
+extension IslandOptions.Content {
+    var title: String {
+        switch self {
+        case .people: String(localized: "People")
+        case .feed: String(localized: "Feed")
+        case .latest: String(localized: "Latest mail")
         }
     }
 }

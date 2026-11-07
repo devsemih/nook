@@ -440,6 +440,16 @@
         }
       }
     },
+    "%lld new in the Feed" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Akış'ta %lld yeni"
+          }
+        }
+      }
+    },
     "%lld new messages" : {
       "localizations" : {
         "tr" : {
@@ -1972,6 +1982,16 @@
         }
       }
     },
+    "Latest mail" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Son mailler"
+          }
+        }
+      }
+    },
     "Latest sender" : {
       "localizations" : {
         "tr" : {
@@ -2590,6 +2610,16 @@
         }
       }
     },
+    "No mail yet" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Henüz mail yok"
+          }
+        }
+      }
+    },
     "No new conversations in the last two weeks" : {
       "localizations" : {
         "tr" : {
@@ -2717,6 +2747,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Çentik"
+          }
+        }
+      }
+    },
+    "Nothing in the Feed yet" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Akış'ta henüz bir şey yok"
+          }
+        }
+      }
+    },
+    "Nothing new in the Feed" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Akış'ta yeni yok"
           }
         }
       }
@@ -3257,6 +3307,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ yanıt yaz…"
+          }
+        }
+      }
+    },
+    "Rows" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Satır sayısı"
           }
         }
       }
@@ -4331,6 +4391,16 @@
         }
       }
     },
+    "What the island shows when it opens. Click a row to go straight to it." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ada açılınca ne gösterilsin. Satıra tıklayınca doğrudan oraya gidersin."
+          }
+        }
+      }
+    },
     "When off, tracking pixels can't run. You can show images in any message with one click." : {
       "localizations" : {
         "tr" : {
@@ -4991,16 +5061,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Açılma şekli"
-          }
-        }
-      }
-    },
-    "Conversations" : {
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Konuşma sayısı"
           }
         }
       }

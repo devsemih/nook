@@ -40,8 +40,8 @@ targets:
         PRODUCT_NAME: Nook
         PRODUCT_MODULE_NAME: Posta
         PRODUCT_BUNDLE_IDENTIFIER: com.odinstudio.posta
-        MARKETING_VERSION: "0.2.0"
-        CURRENT_PROJECT_VERSION: "6"
+        MARKETING_VERSION: "0.3.0"
+        CURRENT_PROJECT_VERSION: "7"
         GENERATE_INFOPLIST_FILE: YES
         # Widget bağlantıları için posta:// adresi
         INFOPLIST_FILE: Posta/Info.plist
@@ -68,8 +68,8 @@ targets:
       base:
         PRODUCT_NAME: PostaWidgets
         PRODUCT_BUNDLE_IDENTIFIER: com.odinstudio.posta.widgets
-        MARKETING_VERSION: "0.2.0"
-        CURRENT_PROJECT_VERSION: "6"
+        MARKETING_VERSION: "0.3.0"
+        CURRENT_PROJECT_VERSION: "7"
         GENERATE_INFOPLIST_FILE: YES
         INFOPLIST_FILE: PostaWidgets/Info.plist
         INFOPLIST_KEY_CFBundleDisplayName: Nook

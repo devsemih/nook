@@ -744,14 +744,14 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = PostaWidgets/PostaWidgets.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PostaWidgets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Nook;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Odin Studio";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				MARKETING_VERSION = 0.2.0;
+				MARKETING_VERSION = 0.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.odinstudio.posta.widgets;
 				PRODUCT_NAME = PostaWidgets;
 				SDKROOT = macosx;
@@ -768,7 +768,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Posta/Posta.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Posta/Info.plist;
@@ -779,7 +779,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.2.0;
+				MARKETING_VERSION = 0.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.odinstudio.posta;
 				PRODUCT_MODULE_NAME = Posta;
 				PRODUCT_NAME = Nook;
@@ -795,7 +795,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Posta/Posta.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Posta/Info.plist;
@@ -806,7 +806,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.2.0;
+				MARKETING_VERSION = 0.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.odinstudio.posta;
 				PRODUCT_MODULE_NAME = Posta;
 				PRODUCT_NAME = Nook;
@@ -820,14 +820,14 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = PostaWidgets/PostaWidgets.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PostaWidgets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Nook;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Odin Studio";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				MARKETING_VERSION = 0.2.0;
+				MARKETING_VERSION = 0.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.odinstudio.posta.widgets;
 				PRODUCT_NAME = PostaWidgets;
 				SDKROOT = macosx;

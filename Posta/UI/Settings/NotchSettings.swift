@@ -65,15 +65,22 @@ struct NotchSettings: View {
                                 ForEach(IslandOptions.Trigger.allCases) { Text($0.title).tag($0) }
                             }
                         }
-                        SettingRow("Conversations") {
-                            Picker("Conversations", selection: $options.rows) {
+                        SettingRow("List", detail: "What the island shows when it opens. Click a row to go straight to it.") {
+                            Picker("List", selection: $options.content) {
+                                ForEach(IslandOptions.Content.allCases) {
+                                    Text($0.title).tag($0).disabled($0 == .feed && !store.splitInbox)
+                                }
+                            }
+                        }
+                        SettingRow("Rows") {
+                            Picker("Rows", selection: $options.rows) {
                                 ForEach(IslandOptions.rowChoices, id: \.self) { Text($0, format: .number).tag($0) }
                             }
                         }
                         SettingRow("Show the Feed", detail: "A single line with what's new in the Feed.") {
                             Toggle("Show the Feed", isOn: $options.showsFeed)
                         }
-                        .disabled(!store.splitInbox)
+                        .disabled(!store.splitInbox || options.content != .people)
                         SettingRow("Show buttons", detail: "New message and Open Nook.") {
                             Toggle("Show buttons", isOn: $options.showsActions)
                         }
@@ -97,7 +104,7 @@ struct NotchSettings: View {
         .onChange(of: [options.announces, options.showsSubject]) { show(.peek) }
         .onChange(of: options.peekSeconds) { show(.peek) }
         .onChange(of: options.showsCodes) { _, shows in show(shows ? .code : .rest) }
-        .onChange(of: [options.trigger.rawValue, "\(options.rows)", "\(options.showsFeed)", "\(options.showsActions)"]) { show(.open) }
+        .onChange(of: [options.trigger.rawValue, options.content.rawValue, "\(options.rows)", "\(options.showsFeed)", "\(options.showsActions)"]) { show(.open) }
     }
 
     private func show(_ stage: IslandPreview.Stage) {
@@ -132,7 +139,7 @@ struct IslandPreview: View {
         let summary = store.widgetSnapshot(accent: nil)
         let mode = mode(summary: summary)
         let compact = IslandSurface.isCompact(summary: summary, options: options)
-        let size = MailIsland.size(for: mode, notch: notch, options: options, compact: compact, feed: options.showsFeed && store.splitInbox)
+        let size = MailIsland.size(for: mode, notch: notch, options: options, compact: compact, feed: options.showsFeedLine(splitInbox: store.splitInbox))
         let scale = min(1, (height - 14) / size.height)
 
         VStack(spacing: 10) {
@@ -160,6 +167,7 @@ struct IslandPreview: View {
                     notch: notch.height,
                     summary: summary,
                     options: options,
+                    items: stage == .open ? store.islandItems(options.content(splitInbox: store.splitInbox), limit: options.rows) : [],
                     open: { _ in },
                     tap: { withAnimation(MailIsland.spring) { stage = .open } }
                 )

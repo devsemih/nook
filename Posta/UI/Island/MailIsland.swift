@@ -3,7 +3,7 @@ import SwiftUI
 
 /// Çentikte yaşayan küçük ada. Dinlenirken çentiğin kendisidir; insanlardan okunmamış mail varsa iki yanına
 /// yazanın yüzü ve sayı çıkar. Yeni mail gelince birkaç saniyeliğine açılıp kimden geldiğini gösterir,
-/// fareyle üzerine gelince son konuşmaları ve Akış'ı açar. Posta'nın penceresi kapalıyken de yaşar.
+/// fareyle üzerine gelince kişileri, Akış'ı ya da son mailleri listeler. Posta'nın penceresi kapalıyken de yaşar.
 @Observable
 final class MailIsland {
     static let shared = MailIsland()
@@ -190,7 +190,7 @@ final class MailIsland {
         Self.size(for: mode, notch: notch, options: options, compact: isCompact, feed: showsFeedLine)
     }
 
-    private var showsFeedLine: Bool { options.showsFeed && (store?.splitInbox ?? true) }
+    private var showsFeedLine: Bool { options.showsFeedLine(splitInbox: store?.splitInbox ?? true) }
 
     /// Adanın her durumdaki boyutu; pencere bundan biraz geniştir, gölge sığsın
     static func size(for mode: Mode, notch: CGSize, options: IslandOptions, compact: Bool, feed: Bool) -> CGSize {
@@ -259,6 +259,7 @@ struct IslandView: View {
                 notch: island.notch.height,
                 summary: summary,
                 options: options,
+                items: island.mode == .open ? store.islandItems(options.content(splitInbox: store.splitInbox), limit: options.rows) : [],
                 isSyncing: syncing,
                 open: { island.open($0) },
                 tap: { island.click() },
@@ -274,6 +275,18 @@ struct IslandView: View {
     }
 }
 
+/// Ada açılınca listedeki bir satır: bir konuşma ya da Akış'ta bir gönderici
+struct IslandItem: Identifiable, Equatable {
+    var id: String
+    var sender: String
+    var subject: String
+    var date: Date
+    var isUnread: Bool
+    /// Akış'ta göndericinin okunmamış mail sayısı
+    var count = 0
+    var link: PostaLink
+}
+
 /// Logo gibi yalnızca siyah ve beyaz: siyah çentik, beyaz kemer, beyaz yazı. Renk yok;
 /// yeniyi parlaklık ve ağırlık anlatır. Ayarlardaki önizleme de bunu çizer.
 struct IslandSurface: View {
@@ -282,6 +295,7 @@ struct IslandSurface: View {
     let notch: CGFloat
     let summary: WidgetSnapshot
     let options: IslandOptions
+    var items: [IslandItem] = []
     var isSyncing = false
     let open: (PostaLink) -> Void
     let tap: () -> Void
@@ -301,8 +315,6 @@ struct IslandSurface: View {
     }
 
     var body: some View {
-        let people = summary.accounts.reduce(0) { $0 + $1.people }
-
         ZStack(alignment: .top) {
             switch mode {
             case .rest:
@@ -316,7 +328,7 @@ struct IslandSurface: View {
                 CodeContent(code: code, notch: notch, copied: copied)
                     .transition(.opacity.combined(with: .scale(scale: 0.92, anchor: .top)))
             case .open:
-                OpenContent(summary: summary, count: people, notch: notch, options: options, open: open)
+                OpenContent(summary: summary, items: items, notch: notch, options: options, open: open)
                     .transition(.opacity.combined(with: .scale(scale: 0.95, anchor: .top)))
             }
         }
@@ -471,23 +483,42 @@ private struct CodeContent: View {
     }
 }
 
-/// Fareyle üzerine gelince: son konuşmalar, Akış ve kısayollar
+/// Fareyle üzerine gelince: seçilen liste, Akış ve kısayollar
 private struct OpenContent: View {
     let summary: WidgetSnapshot
-    let count: Int
+    let items: [IslandItem]
     let notch: CGFloat
     let options: IslandOptions
     let open: (PostaLink) -> Void
 
-    var body: some View {
-        let rows = summary.people
-            .sorted { ($0.isUnread ? 1 : 0, $0.date) > ($1.isUnread ? 1 : 0, $1.date) }
-            .prefix(options.rows)
+    private var content: IslandOptions.Content { options.content(splitInbox: summary.splitInbox) }
 
+    private var title: LocalizedStringKey {
+        switch content {
+        case .people:
+            let count = summary.accounts.reduce(0) { $0 + $1.people }
+            return count > 0 ? "\(count) new conversations" : "All read"
+        case .feed:
+            let count = summary.accounts.reduce(0) { $0 + $1.feed }
+            return count > 0 ? "\(count) new in the Feed" : "Nothing new in the Feed"
+        case .latest:
+            return "Latest mail"
+        }
+    }
+
+    private var emptyText: LocalizedStringKey {
+        switch content {
+        case .people: "No mail from people yet"
+        case .feed: "Nothing in the Feed yet"
+        case .latest: "No mail yet"
+        }
+    }
+
+    var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .center, spacing: 10) {
                 IslandMark(size: 15)
-                Text(count > 0 ? "\(count) new conversations" : "All read")
+                Text(title)
                     .font(.system(size: 15, weight: .semibold))
                     .tracking(-0.2)
                 Spacer(minLength: 8)
@@ -499,11 +530,11 @@ private struct OpenContent: View {
             .frame(minHeight: 28)
 
             VStack(spacing: 0) {
-                ForEach(Array(rows)) { conversation in
-                    IslandRow(conversation: conversation) { open(.thread(conversation.id)) }
+                ForEach(items) { item in
+                    IslandRow(item: item) { open(item.link) }
                 }
-                if rows.isEmpty {
-                    Text("No mail from people yet")
+                if items.isEmpty {
+                    Text(emptyText)
                         .font(.system(size: 12))
                         .foregroundStyle(.white.opacity(0.45))
                         .frame(maxWidth: .infinity, minHeight: 90)
@@ -511,7 +542,7 @@ private struct OpenContent: View {
             }
             .padding(.horizontal, -8)
 
-            if summary.splitInbox && options.showsFeed {
+            if options.showsFeedLine(splitInbox: summary.splitInbox) {
                 FeedLine(summary: summary) { open(.inbox(account: nil)) }
             }
         }
@@ -562,33 +593,38 @@ private struct FeedLine: View {
 }
 
 private struct IslandRow: View {
-    let conversation: WidgetSnapshot.Conversation
+    let item: IslandItem
     let action: () -> Void
     @State private var isHovering = false
 
     var body: some View {
         Button(action: action) {
             HStack(spacing: 11) {
-                IslandAvatar(name: conversation.sender, size: 30)
+                IslandAvatar(name: item.sender, size: 30)
                 VStack(alignment: .leading, spacing: 1) {
-                    Text(conversation.sender)
-                        .font(.system(size: 13, weight: conversation.isUnread ? .semibold : .regular))
-                        .foregroundStyle(.white.opacity(conversation.isUnread ? 1 : 0.7))
-                    Text(conversation.subject)
+                    Text(item.sender)
+                        .font(.system(size: 13, weight: item.isUnread ? .semibold : .regular))
+                        .foregroundStyle(.white.opacity(item.isUnread ? 1 : 0.7))
+                    Text(item.subject)
                         .font(.system(size: 12))
                         .foregroundStyle(.white.opacity(0.45))
                 }
                 .lineLimit(1)
                 Spacer(minLength: 8)
                 HStack(spacing: 7) {
-                    Text(Fmt.listDate(conversation.date))
+                    if item.count > 1 {
+                        Text(item.count, format: .number)
+                            .font(.system(size: 11, weight: .semibold))
+                            .monospacedDigit()
+                    }
+                    Text(Fmt.listDate(item.date))
                         .font(.system(size: 11, weight: .medium))
                         .monospacedDigit()
-                        .foregroundStyle(.white.opacity(conversation.isUnread ? 0.8 : 0.35))
+                        .foregroundStyle(.white.opacity(item.isUnread ? 0.8 : 0.35))
                     Circle()
                         .fill(.white)
                         .frame(width: 5, height: 5)
-                        .opacity(conversation.isUnread ? 1 : 0)
+                        .opacity(item.isUnread ? 1 : 0)
                 }
             }
             .padding(.horizontal, 8)
